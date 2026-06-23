@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: #FEC700;
+  --color-brand-light: #FECB2F;
+  --color-brand-dark: #1c1c1c;
+  --color-brand-dark-2: #2a2a2a;
+  --color-brand-dark-3: #333333;
+  --font-sans: 'Outfit', sans-serif;
+  --font-heading: 'Unbounded', sans-serif;
+}
+
+body {
+  background: #1c1c1c;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+}
