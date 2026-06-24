@@ -26,6 +26,8 @@ export default {
   faqs: [
     { q: 'How much protein do I need daily?', a: 'Minimum 0.8g/kg per day. Active individuals need 1.2-2.2g/kg depending on exercise intensity.' },
     { q: 'Can I eat too much protein?', a: 'Excess protein (3g+/kg) may stress kidneys in sensitive individuals. Stick to recommended ranges.' },
+    { q: 'What are the best sources of dietary protein?', a: 'Lean meats, poultry, fish, eggs, dairy products, legumes, tofu, and quinoa are excellent protein sources. Animal proteins are complete (contain all essential amino acids), while plant proteins can be combined for completeness.' },
+    { q: 'When should I consume protein for muscle growth?', a: 'Distribute protein evenly across 3-4 meals per day, consuming 20-40g per meal. Consuming protein within 2 hours after exercise helps maximize muscle protein synthesis and recovery.' },
   ],
   relatedCalculators: ['calorie-calculator', 'bmr-calculator', 'bmi-calculator'],
   disclaimerType: 'health',

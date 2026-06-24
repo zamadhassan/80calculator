@@ -20,6 +20,8 @@ export default {
   faqs: [
     { q: 'What does present value tell you?', a: 'PV tells you how much a future amount is worth in today dollars, considering the time value of money.' },
     { q: 'Why is present value lower than future value?', a: 'Because money today can be invested to grow. Future money must be discounted for this lost opportunity.' },
+    { q: 'How does inflation act as a discount rate in present value calculations?', a: 'Inflation reduces purchasing power over time, so using the inflation rate as your discount rate shows what a future dollar amount is worth in terms of today purchasing power.' },
+    { q: 'Why is present value important for retirement planning and goal setting?', a: 'Present value helps you determine exactly how much you need to invest today to reach a specific financial goal at a future date, accounting for expected investment returns.' },
   ],
   relatedCalculators: ['future-value-calculator', 'npv-calculator', 'investment-calculator'],
 } satisfies CalculatorConfig

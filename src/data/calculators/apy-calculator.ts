@@ -25,6 +25,8 @@ export default {
   faqs: [
     { q: 'What is the difference between APR and APY?', a: 'APR is the simple rate. APY includes compounding effects. APY is always >= APR.' },
     { q: 'Why does compounding frequency matter?', a: 'More frequent compounding increases effective yield. Daily > monthly > yearly for the same nominal rate.' },
+    { q: 'How do I compare savings accounts with different compounding?', a: 'Use APY to compare accounts directly since it already factors in compounding frequency to give you a true annual rate of return.' },
+    { q: 'What is a good APY for a high-yield savings account?', a: 'High-yield savings accounts currently offer 4 to 5 percent APY, which is significantly higher than traditional brick-and-mortar bank savings rates.' },
   ],
   relatedCalculators: ['apr-calculator', 'compound-interest-calculator', 'daily-compound-interest-calculator'],
 } satisfies CalculatorConfig

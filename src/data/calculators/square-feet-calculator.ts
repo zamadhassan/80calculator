@@ -21,6 +21,8 @@ export default {
   faqs: [
     { q: 'How do I measure irregular shaped rooms?', a: 'Break the room into rectangles, calculate each, and add them together.' },
     { q: 'What is the difference between sq ft and sq m?', a: '1 square meter = 10.764 square feet. Multiply sq m by 10.764 to get sq ft.' },
+    { q: 'How do I calculate square footage for a circular room?', a: 'Measure the radius (half the diameter), square it, and multiply by π (3.14159). For example, a circular room with a 10-foot radius has an area of about 314 square feet (10 × 10 × 3.14159).' },
+    { q: 'How many square feet is a typical house in the US?', a: 'The average US single-family home is about 2,400 square feet as of 2025. However, sizes vary significantly by region, with homes in the South and Midwest generally being larger than those in the Northeast.' },
   ],
   relatedCalculators: ['square-footage-calculator', 'area-calculator', 'acreage-calculator'],
 } satisfies CalculatorConfig

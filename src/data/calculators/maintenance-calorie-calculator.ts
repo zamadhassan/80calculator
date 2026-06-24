@@ -33,6 +33,8 @@ export default {
   faqs: [
     { q: 'Do maintenance calories change over time?', a: 'Yes, as you lose or gain weight, your maintenance calories decrease or increase accordingly.' },
     { q: 'How accurate is TDEE calculation?', a: 'TDEE formulas provide estimates within 10-15%. Actual values vary by individual metabolism.' },
+    { q: 'How do I adjust maintenance calories when my weight changes significantly?', a: 'For every 10 pounds lost, your maintenance calories decrease by approximately 100-150 calories because a smaller body requires less energy to function and maintain itself.' },
+    { q: 'Does exercise affect maintenance calories beyond the activity level multiplier?', a: 'Yes, intense exercise increases your TDEE beyond the standard multipliers. Cardio burns immediate calories while strength training boosts resting metabolism for 24-48 hours post-workout.' },
   ],
   relatedCalculators: ['bmr-calculator', 'calorie-calculator', 'calorie-deficit-calculator'],
   disclaimerType: 'health',

@@ -28,6 +28,8 @@ export default {
   faqs: [
     { q: 'What is a standard concrete mix ratio?', a: 'A common mix ratio is 1:2:4 (cement:sand:aggregate) for general construction.' },
     { q: 'How many cubic feet does a 60lb bag cover?', a: 'A 60lb bag of concrete mix covers approximately 0.45 cubic feet.' },
+    { q: 'How long does cement take to cure fully?', a: 'Cement reaches about 90 percent of its full strength in 28 days but continues curing slowly for months if kept moist at proper temperatures.' },
+    { q: 'What is the difference between cement and concrete?', a: 'Cement is a binding ingredient in concrete. Concrete is the finished mixture of cement, sand, aggregate, and water used for construction.' },
   ],
   relatedCalculators: ['concrete-calculator', 'concrete-yard-calculator'],
   disclaimerType: 'construction',

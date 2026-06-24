@@ -27,6 +27,8 @@ export default {
   faqs: [
     { q: 'What is compound interest?', a: 'Compound interest earns returns on both your original investment and previously earned returns.' },
     { q: 'How often should I compound?', a: 'More frequent compounding yields slightly higher returns. Monthly is typical for most accounts.' },
+    { q: 'How does starting early with compound interest help?', a: 'Starting just five years earlier can double your final returns due to exponential growth from having a longer compounding time horizon.' },
+    { q: 'What is the best investment for compound interest?', a: 'Broad market index funds in tax-advantaged accounts like IRAs and 401k plans offer excellent long-term compounding with relatively low fees.' },
   ],
   relatedCalculators: ['simple-interest-calculator', 'investment-calculator', 'future-value-calculator'],
   disclaimerType: 'finance',

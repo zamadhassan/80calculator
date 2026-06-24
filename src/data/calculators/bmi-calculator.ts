@@ -30,6 +30,8 @@ export default {
   faqs: [
     { q: 'Is BMI an accurate measure of health?', a: 'BMI is a screening tool, not a diagnostic. Athletes may have high BMI due to muscle mass.' },
     { q: 'What is a healthy BMI range?', a: 'A BMI of 18.5-24.9 is considered healthy for most adults.' },
+    { q: 'Can BMI be inaccurate for athletes or elderly people?', a: 'Yes, athletes often show high BMI from muscle rather than fat, and elderly people may have normal BMI despite low muscle and high fat.' },
+    { q: 'What should I do if my BMI is in the obese range?', a: 'Consult a healthcare provider for a personalized health assessment and guidance on achieving a healthier weight through diet and exercise.' },
   ],
   relatedCalculators: ['bmr-calculator', 'calorie-calculator', 'body-fat-calculator'],
   disclaimerType: 'health',

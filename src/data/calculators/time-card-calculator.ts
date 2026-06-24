@@ -46,6 +46,8 @@ export default {
   faqs: [
     { q: 'How do I calculate hours with a lunch break?', a: 'Subtract unpaid break time from total hours. A 30-min lunch reduces 9-5 to 7.5 hours.' },
     { q: 'What counts as overtime?', a: 'In the US, overtime is typically hours worked beyond 40 in a work week.' },
+    { q: 'How do I handle split shifts or irregular work schedules?', a: 'For split shifts, calculate each work segment separately and add the hours together. The time card calculator works best for standard continuous shifts. For irregular schedules, consider using the work hours calculator instead.' },
+    { q: 'What is the difference between exempt and non-exempt employees for overtime?', a: 'Non-exempt employees must receive overtime pay (1.5x regular rate) for hours over 40 per week under FLSA. Exempt employees (typically salaried professionals) are not entitled to overtime pay.' },
   ],
   relatedCalculators: ['timesheet-calculator', 'work-hours-calculator', 'overtime-calculator'],
 } satisfies CalculatorConfig

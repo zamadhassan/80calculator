@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'How does loan term affect payments?', a: 'Longer terms mean lower monthly payments but more total interest paid.' },
     { q: 'What is the difference between simple and amortized loans?', a: 'Simple loans charge interest on the original balance. Amortized loans reduce principal gradually.' },
+    { q: 'How does a down payment affect my monthly loan payment amount?', a: 'A larger down payment reduces the principal amount borrowed, which directly lowers both your monthly payment and total interest paid over the life of the loan.' },
+    { q: 'Should I choose a shorter loan term to save money on interest payments?', a: 'Shorter terms have higher monthly payments but significantly less total interest. A 36-month auto loan saves thousands compared to a 72-month term.' },
   ],
   relatedCalculators: ['simple-loan-calculator', 'loan-amortization-calculator', 'apr-calculator'],
   disclaimerType: 'finance',

@@ -34,6 +34,8 @@ export default {
   faqs: [
     { q: 'How do extra payments help?', a: 'Extra payments go directly to principal, reducing total interest and shortening payoff time.' },
     { q: 'Should I pay off debt or invest?', a: 'Generally pay off high-interest debt (8%+) before investing, since guaranteed returns beat market uncertainty.' },
+    { q: 'What is the debt snowball method?', a: 'Pay minimum on all debts but put extra money toward the smallest balance first for psychological wins that keep you motivated to continue.' },
+    { q: 'How do interest rate changes affect my payoff plan?', a: 'Rate changes alter how much of your payment goes to interest versus principal, so recalculate if your APR changes to stay on track.' },
   ],
   relatedCalculators: ['credit-card-payoff-calculator', 'loan-payment-calculator', 'simple-loan-calculator'],
   disclaimerType: 'finance',

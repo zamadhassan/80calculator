@@ -26,6 +26,8 @@ export default {
   faqs: [
     { q: 'How do I calculate hours across midnight?', a: 'If end time is less than start time, it automatically adds 24 hours.' },
     { q: 'Can I calculate minutes between times?', a: 'Yes, the result shows both hours/minutes and total minutes.' },
+    { q: 'How do I calculate hours worked including lunch breaks throughout the day?', a: 'Calculate total time from start to end first, then subtract your unpaid lunch break duration to get the actual hours worked for accurate time tracking.' },
+    { q: 'Can I calculate hours across multiple days or different shifts using this tool?', a: 'For multi-day calculations, compute each shift separately and add the results together since this calculator handles single time ranges within a 24-hour period.' },
   ],
   relatedCalculators: ['work-hours-calculator', 'time-card-calculator'],
 } satisfies CalculatorConfig

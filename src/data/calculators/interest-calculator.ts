@@ -31,6 +31,8 @@ export default {
   faqs: [
     { q: 'What earns more: simple or compound interest?', a: 'Compound interest earns more because you earn interest on previously earned interest.' },
     { q: 'How often is interest typically compounded?', a: 'Savings accounts: daily or monthly. Loans: monthly. Investments: varies.' },
+    { q: 'How much more does compound interest earn compared to simple over long periods?', a: 'Over 20 years at 7%, a $10,000 investment earns $28,638 with monthly compounding versus $14,000 with simple interest due to earning interest on accumulated interest.' },
+    { q: 'What compounding frequency gives the highest total return on investment?', a: 'More frequent compounding like daily yields slightly higher returns than monthly, but the difference diminishes after monthly and becomes negligible beyond daily compounding.' },
   ],
   relatedCalculators: ['simple-interest-calculator', 'compound-interest-calculator', 'daily-compound-interest-calculator'],
   disclaimerType: 'finance',

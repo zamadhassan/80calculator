@@ -22,6 +22,8 @@ export default {
   faqs: [
     { q: 'How do I convert cubic feet to cubic meters?', a: 'Multiply cubic feet by 0.028317 to get cubic meters.' },
     { q: 'What is the difference between cubic feet and square feet?', a: 'Square feet measures area (2D). Cubic feet measures volume (3D, includes depth/height).' },
+    { q: 'How do I measure irregular-shaped items for cubic feet?', a: 'Measure the longest length, width, and height at the widest points even for irregular items to get a reasonable volume estimate for shipping.' },
+    { q: 'How many cubic feet is a standard shipping pallet?', a: 'A standard 48 by 40 by 48 inch pallet occupies about 53 cubic feet, which helps estimate truck space needed for freight shipping.' },
   ],
   relatedCalculators: ['cubic-yard-calculator', 'square-footage-calculator', 'area-calculator'],
 } satisfies CalculatorConfig

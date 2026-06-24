@@ -19,6 +19,8 @@ export default {
   faqs: [
     { q: 'What is a good CAC?', a: 'A good CAC should be significantly less than customer lifetime value (LTV), ideally LTV:CAC ratio of 3:1.' },
     { q: 'What costs are included in CAC?', a: 'Include advertising spend, marketing salaries, sales team costs, software tools, and creative production.' },
+    { q: 'How can I improve my customer acquisition cost?', a: 'Optimize ad targeting, improve conversion rates, leverage organic marketing channels, and nurture customer referrals to reduce overall acquisition spend.' },
+    { q: 'What is a good CAC to LTV ratio for SaaS?', a: 'A healthy SaaS business typically maintains a 1 to 3 CAC to LTV ratio, meaning each customer generates three times what it costs to acquire them.' },
   ],
   relatedCalculators: ['ltv-calculator', 'roi-calculator'],
 } satisfies CalculatorConfig

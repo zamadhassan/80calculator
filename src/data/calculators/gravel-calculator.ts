@@ -27,6 +27,8 @@ export default {
   faqs: [
     { q: 'How much does a cubic yard of gravel weigh?', a: 'Gravel typically weighs 2,400-2,900 lbs per cubic yard depending on the type.' },
     { q: 'How deep should gravel be for a driveway?', a: 'A driveway typically needs 4-6 inches of compacted gravel base.' },
+    { q: 'How do I measure the length and width for an irregular area?', a: 'Break irregular areas into smaller rectangles and circles, calculate each section separately, then add all volumes together for your total gravel estimate.' },
+    { q: 'What type of gravel is best for a driveway base layer?', a: 'Crushed angular stone like #57 or #3 gravel is ideal because the jagged edges lock together providing a stable, compacted base that resists shifting under vehicle weight.' },
   ],
   relatedCalculators: ['concrete-calculator', 'asphalt-calculator', 'soil-calculator'],
   disclaimerType: 'construction',

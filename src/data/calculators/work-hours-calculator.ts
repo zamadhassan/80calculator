@@ -24,6 +24,8 @@ export default {
   faqs: [
     { q: 'What is the standard work day length?', a: 'A standard work day is 8 hours with a 30-minute to 1-hour unpaid break.' },
     { q: 'How do I enter half hours?', a: 'Use .5 for half hours (e.g., 8:30 AM = 8.5, 5:30 PM = 17.5).' },
+    { q: 'How do I calculate work hours with multiple breaks in a day?', a: 'Add up all break durations and enter the total as a single break time. For example, a 30-minute lunch and two 15-minute breaks should be entered as 60 minutes total in the break field.' },
+    { q: 'What is the difference between decimal hours and minutes for payroll?', a: 'Decimal hours (e.g., 7.5 hours) are commonly used for payroll calculations. Convert minutes to decimal by dividing by 60 (e.g., 7 hours 30 minutes = 7.5 hours). Most payroll systems use decimal format.' },
   ],
   relatedCalculators: ['hours-calculator', 'time-card-calculator', 'overtime-calculator'],
 } satisfies CalculatorConfig

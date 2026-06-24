@@ -26,6 +26,8 @@ export default {
   faqs: [
     { q: 'How do I calculate fuel cost for a trip?', a: 'Divide trip distance by your vehicle MPG to get gallons needed, then multiply by fuel price per gallon.' },
     { q: 'What is average MPG for cars?', a: 'Average modern cars achieve 25-35 MPG. SUVs and trucks average 15-25 MPG.' },
+    { q: 'How can I reduce my fuel costs on long road trips?', a: 'Plan your route efficiently, maintain steady highway speeds between 55-65 mph, and use cruise control to maximize fuel economy and minimize unnecessary braking.' },
+    { q: 'Does driving style affect fuel consumption significantly?', a: 'Aggressive driving with rapid acceleration and hard braking can reduce fuel efficiency by 15-30% on highways and 10-40% in stop-and-go city traffic conditions.' },
   ],
   relatedCalculators: ['mileage-calculator', 'gas-mileage-calculator'],
 } satisfies CalculatorConfig

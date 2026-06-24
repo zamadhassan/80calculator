@@ -20,6 +20,8 @@ export default {
   faqs: [
     { q: 'What is the difference between PV and FV?', a: 'Present Value is today value. Future Value is what it grows to at a given rate over time.' },
     { q: 'How does inflation affect future value?', a: 'Use real return rate (nominal return minus inflation) for inflation-adjusted future value.' },
+    { q: 'What happens to future value if I increase the rate?', a: 'A higher annual rate significantly increases future value due to compound growth. Even a 1% difference can result in thousands more over a 20-30 year investment horizon.' },
+    { q: 'How does time affect future value growth?', a: 'The longer your investment period, the more dramatic the compounding effect. Time is the most powerful factor in growing your money exponentially.' },
   ],
   relatedCalculators: ['present-value-calculator', 'investment-calculator', 'compound-interest-calculator'],
 } satisfies CalculatorConfig

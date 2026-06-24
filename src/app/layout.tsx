@@ -132,6 +132,9 @@ export default function RootLayout({
               <Link href="/" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
                 All Calculators
               </Link>
+              <Link href="/faq" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
+                FAQ
+              </Link>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -149,6 +152,7 @@ export default function RootLayout({
                 </summary>
                 <div className="absolute top-full right-0 mt-2 w-56 rounded-xl border border-white/[0.06] bg-[#1c1c1c] p-2 shadow-2xl z-50" role="menu">
                   <Link href="/" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">Home</Link>
+                  <Link href="/faq" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">FAQ</Link>
                   <div className="h-px bg-white/[0.06] my-1" />
                   <p className="px-3 py-1.5 text-xs text-white/30 uppercase tracking-wider">Categories</p>
                   {categories.map(cat => (
@@ -203,6 +207,7 @@ export default function RootLayout({
                 <h4 className="text-xs font-semibold text-white/40 uppercase tracking-widest">Company</h4>
                 <ul className="mt-4 space-y-2.5">
                   <li><Link href="/" className="text-sm text-white/50 hover:text-brand transition-colors">Home</Link></li>
+                  <li><Link href="/faq" className="text-sm text-white/50 hover:text-brand transition-colors">FAQ</Link></li>
                   <li><span className="text-sm text-white/50">Nexora Creation</span></li>
                 </ul>
               </div>

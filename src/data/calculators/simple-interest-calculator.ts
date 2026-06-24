@@ -27,6 +27,8 @@ export default {
   faqs: [
     { q: 'What is the difference between simple and compound interest?', a: 'Simple interest earns only on the principal. Compound interest earns on principal + accumulated interest.' },
     { q: 'When is simple interest used?', a: 'Some car loans, short-term loans, and bonds use simple interest.' },
+    { q: 'How do I calculate simple interest for a partial year?', a: 'For periods less than a year, convert the time into a fraction of a year. For example, 6 months = 0.5 years, and 90 days = 90/365 ≈ 0.247 years. Then apply the standard formula: Interest = Principal × Rate × Time.' },
+    { q: 'What is the difference between simple interest loans and amortized loans?', a: 'Simple interest loans charge interest only on the original principal throughout the loan term. Amortized loans recalculate interest on the remaining balance each period, so you pay more interest early and less over time.' },
   ],
   relatedCalculators: ['compound-interest-calculator', 'interest-calculator', 'daily-compound-interest-calculator'],
   disclaimerType: 'finance',

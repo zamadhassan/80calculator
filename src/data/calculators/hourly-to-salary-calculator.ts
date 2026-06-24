@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'How many weeks per year are typically worked?', a: 'Most full-time positions use 52 weeks, but 50 is common when accounting for unpaid leave.' },
     { q: 'Does this account for paid time off?', a: 'No. If you have paid vacation, use 52 weeks. For unpaid leave, reduce weeks accordingly.' },
+    { q: 'How do I account for unpaid breaks when converting hourly to salary?', a: 'If you take 30-minute unpaid lunch breaks daily, reduce your effective paid hours per week from 40 to 37.5 to get a more accurate annual salary conversion.' },
+    { q: 'Is the annual salary figure pretax or post-tax in this calculation?', a: 'This calculator shows gross annual salary before taxes and deductions. Your actual take-home pay will be lower after federal, state, and local taxes are applied.' },
   ],
   relatedCalculators: ['salary-calculator', 'hourly-wage-calculator', 'gross-pay-calculator'],
 } satisfies CalculatorConfig

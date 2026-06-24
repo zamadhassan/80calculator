@@ -29,6 +29,8 @@ export default {
   faqs: [
     { q: 'How do I calculate sales tax backwards?', a: 'Divide the total price by (1 + tax rate). For 8% tax: Total / 1.08 = pre-tax price.' },
     { q: 'Do I need to charge sales tax online?', a: 'It depends on your nexus (physical presence) and local laws. Consult a tax professional.' },
+    { q: 'What items are typically exempt from sales tax?', a: 'Most states exempt essential items like groceries (unprepared food), prescription medications, and medical devices. Clothing is exempt in some states. Business-to-business transactions may also qualify for tax-exempt status.' },
+    { q: 'How do sales tax rates vary by location?', a: 'Sales tax can include state, county, and city components. Some areas have total rates under 4%, while others exceed 10%. Always check the combined rate for your specific shipping or purchase address.' },
   ],
   relatedCalculators: ['discount-calculator', 'price-calculator'],
 } satisfies CalculatorConfig

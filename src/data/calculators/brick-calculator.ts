@@ -30,6 +30,8 @@ export default {
   faqs: [
     { q: 'How many bricks per square foot?', a: 'With standard 8×2.25-inch bricks and 3/8-inch mortar, about 6.75 bricks per sq ft.' },
     { q: 'What is a standard brick size?', a: 'A standard modular brick is 8 × 2.25 × 3.625 inches.' },
+    { q: 'Should I buy extra bricks beyond the waste factor?', a: 'Yes, buying 10 to 15 extra bricks ensures you have matching ones for future repairs since brick colors can vary significantly by batch.' },
+    { q: 'How do I calculate bricks for a wall with windows?', a: 'Calculate the full wall area, subtract window and door openings, then use the standard brick formula on the remaining surface area only.' },
   ],
   relatedCalculators: ['concrete-calculator', 'square-footage-calculator'],
   disclaimerType: 'construction',

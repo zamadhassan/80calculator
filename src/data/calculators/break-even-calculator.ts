@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'What is the break-even point?', a: 'The point where total revenue equals total costs, resulting in zero profit or loss.' },
     { q: 'How can I lower my break-even point?', a: 'Reduce fixed costs, lower variable costs, or increase your selling price.' },
+    { q: 'What happens if my variable costs change over time?', a: 'Recalculate with updated costs to see how rising material or labor expenses affect your break-even point and overall business profitability.' },
+    { q: 'How do I factor in multiple products for break-even?', a: 'Calculate break-even for each product separately using its price and variable cost, then sum fixed costs across all products for the total picture.' },
   ],
   relatedCalculators: ['margin-calculator', 'profit-calculator', 'price-calculator'],
 } satisfies CalculatorConfig

@@ -30,6 +30,8 @@ export default {
     { q: 'How do I measure my roof pitch?', a: 'Measure the vertical rise over 12 inches of horizontal run. A 6/12 pitch means 6 inches rise per foot.' },
     { q: 'What is a typical waste factor for roofing?', a: 'A 10-15% waste factor is standard to account for cuts, overlaps, and mistakes.' },
     { q: 'Does this include labor costs?', a: 'No, this estimates material quantities and costs only. Labor varies by region and contractor.' },
+    { q: 'How many squares of roofing do I need for my house?', a: 'A roofing square is 100 square feet. Divide your total roof area by 100 to get the number of squares needed. Most single-family homes need 20-35 squares depending on their footprint and roof complexity.' },
+    { q: 'Should I replace roofing felt or underlayment during re-roofing?', a: 'Yes, always replace the underlayment when re-roofing. The underlayment provides a secondary waterproof barrier that protects the roof deck from moisture if shingles are damaged or blown off.' },
   ],
   relatedCalculators: ['roof-pitch-calculator', 'square-footage-calculator', 'concrete-calculator'],
   disclaimerType: 'construction',

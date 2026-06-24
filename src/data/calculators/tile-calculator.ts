@@ -27,6 +27,8 @@ export default {
   faqs: [
     { q: 'How much extra tile should I buy?', a: 'Buy 10-15% extra to account for cuts, breakage, and future repairs.' },
     { q: 'What tile size is best for small bathrooms?', a: 'Large tiles (12×24) can make small spaces look bigger. Small tiles (1×1 mosaics) work for showers.' },
+    { q: 'Should I use the same tile size for floors and walls?', a: 'For a cohesive look, you can use different sizes of the same tile type. Floor tiles are typically 12×24 or 18×18 inches, while wall tiles are often 4×4, 6×6, or subway tile. Ensure floor tiles have adequate slip resistance.' },
+    { q: 'How do I calculate tiles needed for a diagonal pattern?', a: 'Diagonal installations require more tile due to increased cutting waste. Add 15-20% waste instead of the standard 10%. Purchase extra tiles to account for the angled cuts along walls and corners.' },
   ],
   relatedCalculators: ['square-footage-calculator', 'area-calculator'],
   disclaimerType: 'construction',

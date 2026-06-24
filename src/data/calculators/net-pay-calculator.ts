@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'How accurate is this net pay estimate?', a: 'This is an estimate. Actual deductions vary by location, filing status, benefits, and other factors.' },
     { q: 'What other deductions might apply?', a: 'Health insurance, 401(k) contributions, FSA, HSA, union dues, and wage garnishments.' },
+    { q: 'How do state taxes affect my net pay compared to federal taxes alone?', a: 'State income tax rates range from 0% in states like Texas and Florida to over 13% in California, significantly impacting your overall net pay and take-home earnings.' },
+    { q: 'What is FICA and how much does it reduce my gross pay each pay period?', a: 'FICA includes Social Security at 6.2% and Medicare at 1.45%, totaling 7.65% of your gross pay that is automatically deducted before you receive your paycheck.' },
   ],
   relatedCalculators: ['gross-pay-calculator', 'salary-calculator', 'take-home-pay-calculator'],
   disclaimerType: 'finance',

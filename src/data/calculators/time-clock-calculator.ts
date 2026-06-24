@@ -24,6 +24,8 @@ export default {
   faqs: [
     { q: 'Do lunch breaks count as work time?', a: 'Unpaid lunch breaks (30+ minutes) are typically not counted as work time.' },
     { q: 'How do I track clock in/out for multiple days?', a: 'Use the Time Card calculator for weekly entries or log each day separately.' },
+    { q: 'What is the minimum break duration required by law?', a: 'Federal law does not require meal or rest breaks, but many states mandate a 30-minute meal break for shifts over 5-6 hours and short rest breaks of 10-15 minutes per 4 hours worked. Check your state regulations.' },
+    { q: 'How can I track time if I work past midnight?', a: 'Use a 24-hour clock format where midnight is 24.0 or 0.0. If you clock in at 22:00 (10 PM) and out at 6:00 (6 AM), add 24 to the out time: 6 + 24 - 22 = 8 hours worked.' },
   ],
   relatedCalculators: ['time-card-calculator', 'work-hours-calculator', 'payroll-hours-calculator'],
 } satisfies CalculatorConfig

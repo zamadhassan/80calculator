@@ -27,6 +27,8 @@ export default {
   faqs: [
     { q: 'What is the standard SS + Medicare rate?', a: 'Social Security is 6.2% and Medicare is 1.45%, totaling 7.65% for employees in 2025.' },
     { q: 'Does this include all possible deductions?', a: 'This is an estimate. Actual deductions vary by location, employer, and individual circumstances.' },
+    { q: 'How do pre-tax deductions affect my take-home pay?', a: 'Pre-tax deductions like 401(k) contributions, health insurance premiums, and HSA contributions reduce your taxable income, which lowers both your tax liability and your take-home pay while providing valuable benefits.' },
+    { q: 'What is the difference between marginal and effective tax rate?', a: 'Your marginal tax rate is the rate applied to your next dollar of income (your highest tax bracket). Your effective tax rate is the average rate you actually pay, calculated as total tax divided by gross income.' },
   ],
   relatedCalculators: ['net-pay-calculator', 'gross-pay-calculator', 'salary-calculator'],
   disclaimerType: 'finance',

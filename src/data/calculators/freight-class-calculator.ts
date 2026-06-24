@@ -24,6 +24,8 @@ export default {
   faqs: [
     { q: 'What is freight class?', a: 'A standardized classification system (NMFC) used for less-than-truckload (LTL) shipping pricing.' },
     { q: 'How is freight class determined?', a: 'Primarily by density (lbs/cu ft), but also by handling, stowability, and liability characteristics.' },
+    { q: 'What is the most common freight class for general cargo?', a: 'Class 50 is for heavy dense items over 50 pcf, while Class 150 covers lighter bulkier freight like furniture and boxes shipped via LTL.' },
+    { q: 'How do I lower my freight class to reduce shipping costs?', a: 'Pack items more densely, use smaller boxes, reduce void fill material, and combine multiple pieces into single shipments when possible.' },
   ],
   relatedCalculators: ['shipping-calculator'],
 } satisfies CalculatorConfig

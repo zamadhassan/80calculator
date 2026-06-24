@@ -28,6 +28,8 @@ export default {
   faqs: [
     { q: 'How much area does a gallon of paint cover?', a: 'A gallon of paint typically covers 350-400 sq ft for one coat.' },
     { q: 'Do I need primer?', a: 'Primer is recommended for new drywall, dark colors, or stained surfaces.' },
+    { q: 'Should I buy extra paint beyond the calculated amount for touch-ups later?', a: 'It is recommended to buy 10-15% extra paint beyond the calculated amount to account for spillage, waste, and having matching paint for future touch-ups.' },
+    { q: 'Does paint color or sheen affect how much coverage I get per gallon?', a: 'Darker colors and flat finishes often require more coats for full coverage, while lighter colors and glossy finishes typically provide better coverage with fewer coats applied.' },
   ],
   relatedCalculators: ['square-footage-calculator', 'area-calculator'],
   disclaimerType: 'construction',

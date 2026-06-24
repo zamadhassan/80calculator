@@ -26,6 +26,8 @@ export default {
   faqs: [
     { q: 'How thick should asphalt be for a driveway?', a: 'Residential driveways typically need 2-3 inches of asphalt over a base.' },
     { q: 'How much does a ton of asphalt cover?', a: '1 ton of asphalt covers about 80 sq ft at 2 inches thick.' },
+    { q: 'How long does asphalt last on a driveway?', a: 'Properly installed asphalt driveways last 15 to 20 years with regular sealing and maintenance every 3 to 5 years for best results.' },
+    { q: 'What is the best thickness for a parking lot?', a: 'Commercial parking lots need 4 to 6 inches of asphalt over 6 to 8 inches of base material to handle heavy vehicle traffic without damage.' },
   ],
   relatedCalculators: ['gravel-calculator', 'concrete-calculator'],
   disclaimerType: 'construction',

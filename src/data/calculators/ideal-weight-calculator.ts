@@ -32,6 +32,8 @@ export default {
   faqs: [
     { q: 'What is the most accurate ideal weight formula?', a: 'No single formula is perfect. The healthy BMI range (18.5-24.9) is widely accepted.' },
     { q: 'Does ideal weight consider muscle mass?', a: 'No, these formulas do not account for muscle mass. Athletes may be healthy above the range.' },
+    { q: 'Which ideal weight formula is best for tall or short individuals?', a: 'The Miller formula tends to work better for taller individuals while the Hamwi formula has been found more accurate for shorter people in clinical studies.' },
+    { q: 'Should I use ideal weight or BMI range for my health and fitness goals?', a: 'The healthy BMI range of 18.5-24.9 is generally preferred over formula-based ideal weights since it accounts for individual body composition differences better.' },
   ],
   relatedCalculators: ['bmi-calculator', 'body-fat-calculator', 'calorie-calculator'],
   disclaimerType: 'health',

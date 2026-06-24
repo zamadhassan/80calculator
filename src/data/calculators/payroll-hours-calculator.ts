@@ -25,6 +25,8 @@ export default {
   faqs: [
     { q: 'What is the standard overtime threshold?', a: 'In the US, 40 hours per week is the standard overtime threshold for non-exempt employees.' },
     { q: 'How is overtime pay calculated?', a: 'Overtime is typically paid at 1.5 times the regular hourly rate (time-and-a-half).' },
+    { q: 'What happens when an employee works overtime on a day that is not the standard workday?', a: 'Overtime is calculated based on total weekly hours exceeding the threshold, regardless of which specific days the overtime hours were worked during the week.' },
+    { q: 'How do I handle overtime for employees with different hourly rates in the same week?', a: 'Use the weighted average of all hourly rates worked during the week to calculate the overtime rate for accurate payroll processing.' },
   ],
   relatedCalculators: ['overtime-calculator', 'time-card-calculator', 'gross-pay-calculator'],
 } satisfies CalculatorConfig

@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'How can I improve my gas mileage?', a: 'Maintain proper tire pressure, avoid aggressive acceleration, reduce idling, and remove excess weight.' },
     { q: 'Does AC affect gas mileage?', a: 'Yes, running AC can reduce MPG by 5-25% depending on driving conditions and vehicle.' },
+    { q: 'How can I calculate MPG accurately over multiple fill-ups?', a: 'Track total miles and total gallons across 3-5 consecutive fill-ups, then divide cumulative miles by cumulative gallons for a more accurate long-term average.' },
+    { q: 'Does weather affect gas mileage and overall fuel efficiency?', a: 'Cold weather reduces MPG by 12-22% on short trips due to thicker engine oil, longer warm-up times, and increased aerodynamic drag from colder, denser air.' },
   ],
   relatedCalculators: ['mileage-calculator', 'fuel-cost-calculator'],
 } satisfies CalculatorConfig

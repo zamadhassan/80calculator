@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'What is amortization?', a: 'Amortization spreads loan payments over time so each payment covers interest and gradually reduces principal.' },
     { q: 'How much interest do I pay in early years?', a: 'Early payments are mostly interest. Over time, more goes toward principal.' },
+    { q: 'How much can I save by making extra principal payments on my mortgage each month?', a: 'Adding $100 extra monthly to a $250,000 mortgage at 6.5% can save over $70,000 in interest and shorten the loan term by approximately 6-7 years.' },
+    { q: 'What happens to amortization if I refinance to a lower interest rate?', a: 'Refinancing resets the amortization schedule. Your monthly payment decreases but you extend the term, so calculate total interest carefully before refinancing.' },
   ],
   relatedCalculators: ['amortization-schedule-calculator', 'loan-payment-calculator', 'simple-loan-calculator'],
   disclaimerType: 'finance',

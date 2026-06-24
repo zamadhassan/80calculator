@@ -25,6 +25,8 @@ export default {
   faqs: [
     { q: 'What is the difference between markup and margin?', a: 'Markup is % of cost. Margin is % of price. 50% markup = 33.3% margin.' },
     { q: 'What is a standard markup in retail?', a: 'Retail markup varies: 50-100% for clothing, 30-50% for electronics, 100-300% for jewelry.' },
+    { q: 'How do I choose the right markup percentage for my products or services?', a: 'Research competitor pricing, understand your target market willingness to pay, and ensure your markup covers all costs including overhead, shipping, and marketing expenses.' },
+    { q: 'Should markup percentages be consistent across all products in my store inventory?', a: 'Not necessarily. Low-demand or niche items can support higher markups of 100-200% while competitive commodity items may only sustain 20-30% markup.' },
   ],
   relatedCalculators: ['margin-calculator', 'price-calculator', 'profit-calculator'],
 } satisfies CalculatorConfig

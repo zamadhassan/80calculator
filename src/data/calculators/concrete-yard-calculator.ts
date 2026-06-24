@@ -25,6 +25,8 @@ export default {
   faqs: [
     { q: 'How much does a cubic yard of concrete cover?', a: '1 cubic yard covers 81 sq ft at 4 inches thick, or 54 sq ft at 6 inches.' },
     { q: 'Should I order extra concrete?', a: 'Yes, order 5-10% extra to account for variations in depth and spillage.' },
+    { q: 'How do I order ready-mix concrete?', a: 'Call a supplier with your cubic yard total, add 10 percent for waste, specify psi strength, and arrange pour time with proper truck access.' },
+    { q: 'What is the minimum amount of concrete I can order?', a: 'Most ready-mix companies have a 1 cubic yard minimum delivery, though some may charge a short-load fee for smaller quantities than that.' },
   ],
   relatedCalculators: ['concrete-calculator', 'cement-calculator', 'cubic-yard-calculator'],
   disclaimerType: 'construction',

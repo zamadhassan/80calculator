@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'What is the standard riser height?', a: 'Building codes typically allow 4-7.75 inches riser height. 7 inches is common for residential.' },
     { q: 'What is the minimum tread depth?', a: 'Minimum tread depth is typically 10 inches, with 11 inches being standard for comfort.' },
+    { q: 'What is the ideal tread depth for comfortable stairs?', a: 'An 11-inch tread depth combined with a 7-inch riser height is considered the most comfortable stair proportion. The formula 2R + T (2 × riser + tread) should be between 24 and 25 inches for optimal comfort.' },
+    { q: 'What building codes apply to stair construction?', a: 'The IRC requires maximum riser height of 7.75 inches, minimum tread depth of 10 inches, minimum stair width of 36 inches, and handrails on stairs with 4 or more risers. Local codes may vary.' },
   ],
   relatedCalculators: ['square-footage-calculator', 'concrete-calculator'],
   disclaimerType: 'construction',

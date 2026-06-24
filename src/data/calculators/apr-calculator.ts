@@ -25,6 +25,8 @@ export default {
   faqs: [
     { q: 'What is the difference between APR and interest rate?', a: 'APR includes both the interest rate and fees, giving a more complete picture of loan cost.' },
     { q: 'Why is APR higher than the interest rate?', a: 'APR includes origination fees, processing costs, and other charges spread across the loan term.' },
+    { q: 'Do all lenders charge fees included in APR?', a: 'Most lenders charge origination fees, processing fees, or points that must legally be included in the APR calculation for transparency.' },
+    { q: 'What is a good APR for a personal loan?', a: 'Good APR ranges from 6 to 36 percent depending on credit score, with scores above 700 typically qualifying for the lowest available rates.' },
   ],
   relatedCalculators: ['loan-payment-calculator', 'simple-loan-calculator', 'apy-calculator'],
   disclaimerType: 'finance',

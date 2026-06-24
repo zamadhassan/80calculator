@@ -1,6 +1,7 @@
 import type { CalculatorConfig } from '@/types/calculator'
 
 import acreage from './acreage-calculator'
+import age from './age-calculator'
 import aggregate from './aggregate-calculator'
 import amortizationSchedule from './amortization-schedule-calculator'
 import annualIncome from './annual-income-calculator'
@@ -26,6 +27,9 @@ import creditCardPayoff from './credit-card-payoff-calculator'
 import cubicFeet from './cubic-feet-calculator'
 import cubicYard from './cubic-yard-calculator'
 import dailyCompoundInterest from './daily-compound-interest-calculator'
+import dateAdd from './date-add-calculator'
+import dateDifference from './date-difference-calculator'
+import dayOfWeek from './day-of-week-calculator'
 import debtPayoff from './debt-payoff-calculator'
 import discount from './discount-calculator'
 import fence from './fence-calculator'
@@ -43,6 +47,7 @@ import interest from './interest-calculator'
 import investment from './investment-calculator'
 import investmentReturn from './investment-return-calculator'
 import irr from './irr-calculator'
+import lengthConverter from './length-converter'
 import loanAmortization from './loan-amortization-calculator'
 import loanPayment from './loan-payment-calculator'
 import ltv from './ltv-calculator'
@@ -53,10 +58,12 @@ import mileage from './mileage-calculator'
 import monthlyIncome from './monthly-income-calculator'
 import netPay from './net-pay-calculator'
 import npv from './npv-calculator'
+import numberBase from './number-base-converter'
 import overtime from './overtime-calculator'
 import ovulation from './ovulation-calculator'
 import paint from './paint-calculator'
 import payrollHours from './payroll-hours-calculator'
+import percentage from './percentage-calculator'
 import period from './period-calculator'
 import presentValue from './present-value-calculator'
 import price from './price-calculator'
@@ -71,28 +78,36 @@ import shipping from './shipping-calculator'
 import simpleInterest from './simple-interest-calculator'
 import simpleLoan from './simple-loan-calculator'
 import soil from './soil-calculator'
+import speedConverter from './speed-converter'
 import squareFeet from './square-feet-calculator'
 import squareFootage from './square-footage-calculator'
 import stair from './stair-calculator'
 import takeHomePay from './take-home-pay-calculator'
+import temperatureConverter from './temperature-converter'
 import tile from './tile-calculator'
 import timeCard from './time-card-calculator'
 import timeClock from './time-clock-calculator'
+import timeDuration from './time-duration-calculator'
 import timesheet from './timesheet-calculator'
+import weeksBetween from './weeks-between-dates-calculator'
+import weightConverter from './weight-converter'
 import workHours from './work-hours-calculator'
 
 export default [
-  acreage, aggregate, amortizationSchedule, annualIncome, apr,
+  acreage, age, aggregate, amortizationSchedule, annualIncome, apr,
   apy, area, asphalt, bmi, bmr, bodyFat, breakEven, brick,
   businessLoan, cac, cagr, calorie, calorieDeficit, cement,
   compoundInterest, concrete, concreteYard, creditCardPayoff,
-  cubicFeet, cubicYard, dailyCompoundInterest, debtPayoff, discount,
+  cubicFeet, cubicYard, dailyCompoundInterest, dateAdd, dateDifference,
+  dayOfWeek, debtPayoff, discount,
   fence, freightClass, fuelCost, futureValue, gasMileage, gravel,
   grossPay, hourlyToSalary, hourlyWage, hours, idealWeight, interest,
-  investment, investmentReturn, irr, loanAmortization, loanPayment, ltv,
+  investment, investmentReturn, irr, lengthConverter, loanAmortization, loanPayment, ltv,
   maintenanceCalorie, margin, markup, mileage, monthlyIncome, netPay,
-  npv, overtime, ovulation, paint, payrollHours, period, presentValue,
-  price, profit, protein, roi, roofPitch, roofing, salary, salesTax,
-  shipping, simpleInterest, simpleLoan, soil, squareFeet, squareFootage,
-  stair, takeHomePay, tile, timeCard, timeClock, timesheet, workHours,
+  npv, numberBase, overtime, ovulation, paint, payrollHours, percentage,
+  period, presentValue, price, profit, protein, roi, roofPitch, roofing,
+  salary, salesTax, shipping, simpleInterest, simpleLoan, soil,
+  speedConverter, squareFeet, squareFootage, stair,
+  takeHomePay, temperatureConverter, tile, timeCard, timeClock,
+  timeDuration, timesheet, weeksBetween, weightConverter, workHours,
 ] as CalculatorConfig[]

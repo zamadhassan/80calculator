@@ -28,6 +28,8 @@ export default {
   faqs: [
     { q: 'How many 60lb bags make a yard?', a: 'Approximately 60 bags of 60lb concrete mix make 1 cubic yard.' },
     { q: 'Should I include waste in my estimate?', a: 'Yes, add 5-10% waste for spillage, uneven subgrade, and variations.' },
+    { q: 'What is the difference between 3000 and 4000 psi concrete?', a: 'Higher psi concrete contains more cement and is stronger. Use 4000 psi for driveways and 3000 psi for patios and walkways.' },
+    { q: 'How do I prevent concrete from cracking after pouring?', a: 'Use control joints every 8 to 12 feet, properly cure the concrete for 7 days, and ensure the subgrade is well-compacted before pouring.' },
   ],
   relatedCalculators: ['concrete-yard-calculator', 'cement-calculator', 'square-footage-calculator'],
   disclaimerType: 'construction',

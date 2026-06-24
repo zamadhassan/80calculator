@@ -28,6 +28,8 @@ export default {
   faqs: [
     { q: 'How many weeks in a month?', a: 'Average is 4.33 weeks per month (52 weeks / 12 months).' },
     { q: 'Is monthly income gross or net?', a: 'This calculates gross monthly income (before taxes and deductions).' },
+    { q: 'How do I calculate monthly income if I get paid every two weeks instead of monthly?', a: 'Multiply your bi-weekly paycheck amount by 26 pay periods, then divide by 12 months to get your average monthly income for budgeting purposes.' },
+    { q: 'Should I use gross or net income when creating my monthly budget plan?', a: 'Use net take-home pay for budgeting since that is the money actually available for expenses, savings, and discretionary spending after all deductions are taken out.' },
   ],
   relatedCalculators: ['annual-income-calculator', 'salary-calculator', 'net-pay-calculator'],
 } satisfies CalculatorConfig

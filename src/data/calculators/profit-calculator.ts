@@ -24,6 +24,8 @@ export default {
   faqs: [
     { q: 'What is the difference between gross and net profit?', a: 'Gross profit is revenue minus cost of goods sold. Net profit also subtracts operating expenses.' },
     { q: 'How can I increase my profit margin?', a: 'Raise prices, reduce costs, increase volume, or improve operational efficiency.' },
+    { q: 'What is the break-even point and how do I calculate it?', a: 'The break-even point is when total revenue equals total costs, resulting in zero profit. Divide fixed costs by the contribution margin (price minus variable cost per unit) to find how many units you need to sell.' },
+    { q: 'What is the difference between fixed and variable costs?', a: 'Fixed costs remain constant regardless of production volume (rent, salaries), while variable costs change with output (materials, labor). Understanding both is crucial for accurate profit analysis and pricing decisions.' },
   ],
   relatedCalculators: ['margin-calculator', 'break-even-calculator', 'roi-calculator'],
 } satisfies CalculatorConfig

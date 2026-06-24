@@ -24,6 +24,8 @@ export default {
   faqs: [
     { q: 'What does a 6/12 roof pitch mean?', a: 'It means the roof rises 6 inches for every 12 inches of horizontal run.' },
     { q: 'What is the most common roof pitch?', a: 'A 4/12 to 9/12 pitch is most common in residential construction.' },
+    { q: 'What is the minimum roof pitch for shingles?', a: 'Standard asphalt shingles require a minimum 4/12 pitch for proper water drainage. Low-slope roofs (2/12 to 4/12) require specialized roofing materials like rolled roofing or rubber membranes.' },
+    { q: 'How can I measure roof pitch without climbing the roof?', a: 'Stand at the gable end of the house, hold a level horizontally at the roofline, measure 12 inches along the level, then measure the vertical distance from that point down to the roof surface.' },
   ],
   relatedCalculators: ['roofing-calculator', 'square-footage-calculator'],
   disclaimerType: 'construction',

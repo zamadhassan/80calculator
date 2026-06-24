@@ -27,6 +27,8 @@ export default {
   faqs: [
     { q: 'What is a good IRR?', a: 'An IRR higher than your cost of capital is good. Generally, 15%+ is considered attractive.' },
     { q: 'What is the difference between IRR and ROI?', a: 'IRR considers time value of money. ROI is a simpler percentage return without timing.' },
+    { q: 'What if my cash flows are irregular or skip a year in the calculation?', a: 'For years with no cash flow, enter zero for that year amount. The IRR calculation will properly account for the gap in the cash flow sequence.' },
+    { q: 'Can IRR be negative and what does a negative IRR signify?', a: 'Yes, a negative IRR means the investment loses money overall because the total discounted cash flows never recover the initial investment cost.' },
   ],
   relatedCalculators: ['npv-calculator', 'cagr-calculator', 'roi-calculator'],
   disclaimerType: 'finance',

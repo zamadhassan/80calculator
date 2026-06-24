@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'How can I pay off credit card debt faster?', a: 'Pay more than the minimum, consider balance transfer, or use the debt avalanche method.' },
     { q: 'What happens if I only make minimum payments?', a: 'Minimum payments can extend payoff by years and multiply total interest dramatically.' },
+    { q: 'What is the debt avalanche method?', a: 'Pay the minimum on all cards but put extra money toward the card with the highest APR first to minimize total interest paid over the repayment period.' },
+    { q: 'Should I close credit cards after paying them off?', a: 'Closing cards reduces your available credit and may hurt your credit utilization ratio, so it is better to keep them open with a zero balance.' },
   ],
   relatedCalculators: ['debt-payoff-calculator', 'loan-payment-calculator', 'simple-loan-calculator'],
   disclaimerType: 'finance',

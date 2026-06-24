@@ -21,6 +21,8 @@ export default {
   faqs: [
     { q: 'How many square feet in an acre?', a: 'There are 43,560 square feet in one acre.' },
     { q: 'How do I convert acres to hectares?', a: 'Multiply acres by 0.4047 to get hectares. Or divide square feet by 107,639.' },
+    { q: 'What is the cheapest way to measure large acreage?', a: 'Use GPS or satellite mapping tools for free estimates, or hire a licensed surveyor for legal boundary verification and official documentation.' },
+    { q: 'Can I use this for irregularly shaped lots?', a: 'Yes, divide the irregular lot into rectangles and triangles, calculate each area separately, then sum them for a close total acreage estimate.' },
   ],
   relatedCalculators: ['square-footage-calculator', 'area-calculator', 'square-feet-calculator'],
 } satisfies CalculatorConfig

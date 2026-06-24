@@ -28,6 +28,8 @@ export default {
   faqs: [
     { q: 'What is the difference between margin and markup?', a: 'Margin is % of selling price. Markup is % of cost. A 50% markup equals 33.3% margin.' },
     { q: 'How do I price a product with a target margin?', a: 'Divide the cost by (1 - desired margin). For 40% margin: cost / 0.60.' },
+    { q: 'Should I use margin or markup when setting prices for my online store products?', a: 'Use margin for financial analysis since it relates to revenue, but use markup for quick cost-based pricing. Most retailers use markup for initial pricing then track margin for profitability.' },
+    { q: 'How do shipping costs and payment processing fees affect my final product pricing?', a: 'Include shipping materials, carrier fees, and payment processor charges (typically 2.5-3.5%) in your product cost before applying margin or markup to ensure profitability.' },
   ],
   relatedCalculators: ['margin-calculator', 'markup-calculator', 'profit-calculator'],
 } satisfies CalculatorConfig

@@ -25,6 +25,8 @@ export default {
   faqs: [
     { q: 'What is a reasonable expected return?', a: 'Historical S&P 500 average is 7-10% annually. Conservative: 4-6%. Aggressive: 10-12%.' },
     { q: 'How do monthly contributions impact growth?', a: 'Regular contributions dramatically increase final value through dollar-cost averaging and compound growth.' },
+    { q: 'What if I stop making monthly contributions halfway through the investment period?', a: 'Stopping contributions reduces the final value significantly since you miss out on compound growth during the remaining years. Consistent contributions maximize long-term wealth building.' },
+    { q: 'How do taxes affect my actual investment returns over the long term?', a: 'Taxes on capital gains and dividends can reduce effective returns by 15-30% depending on your tax bracket. Consider using tax-advantaged accounts like IRAs or 401(k)s.' },
   ],
   relatedCalculators: ['compound-interest-calculator', 'investment-return-calculator', 'future-value-calculator'],
   disclaimerType: 'finance',

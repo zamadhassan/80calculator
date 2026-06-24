@@ -25,6 +25,8 @@ export default {
   faqs: [
     { q: 'How many work hours in a year?', a: 'Standard full-time: 40 hours × 52 weeks = 2,080 hours per year.' },
     { q: 'Should I include paid time off in weeks?', a: 'No, use 52 weeks for salaried positions with paid vacation. Use fewer weeks if unpaid.' },
+    { q: 'Should freelancers use a different hourly rate than salary employees?', a: 'Freelancers should factor in self-employment taxes, health insurance, unpaid time off, and overhead costs, typically adding 25-40% above the equivalent employee hourly rate.' },
+    { q: 'How do bonuses and commissions affect the hourly wage calculation?', a: 'Add expected annual bonuses and commissions to your base salary before dividing to get a more accurate hourly rate that reflects your total annual compensation.' },
   ],
   relatedCalculators: ['hourly-to-salary-calculator', 'salary-calculator', 'gross-pay-calculator'],
 } satisfies CalculatorConfig

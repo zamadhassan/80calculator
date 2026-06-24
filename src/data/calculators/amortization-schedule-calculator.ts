@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'What does a full schedule show?', a: 'Each month shows: payment amount, interest portion, principal portion, and remaining balance.' },
     { q: 'Can I see the schedule for extra payments?', a: 'This calculates the standard schedule. Extra payments reduce total interest and shorten the term.' },
+    { q: 'How does paying extra each month affect my schedule?', a: 'Extra payments reduce principal faster, lowering total interest paid and shortening the loan term significantly over the life of the loan.' },
+    { q: 'Can I use this for a mortgage amortization schedule?', a: 'Yes, simply enter your mortgage principal, annual interest rate, and term in months to generate a complete month-by-month payment breakdown.' },
   ],
   relatedCalculators: ['loan-amortization-calculator', 'loan-payment-calculator', 'credit-card-payoff-calculator'],
   disclaimerType: 'finance',

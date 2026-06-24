@@ -20,6 +20,8 @@ export default {
   faqs: [
     { q: 'What is a good LTV?', a: 'A good LTV is typically 3x your customer acquisition cost (CAC).' },
     { q: 'How can I increase LTV?', a: 'Improve retention, increase order frequency, upsell, and cross-sell.' },
+    { q: 'How do I calculate LTV for a subscription-based business model?', a: 'For subscriptions, multiply monthly revenue per customer by gross margin, then divide by your monthly churn rate to get customer lifetime value accurately.' },
+    { q: 'What strategies can improve customer lifetime value for my business?', a: 'Improve onboarding to boost retention, implement loyalty programs, personalize email marketing, and offer complementary products through strategic upsells and cross-sells.' },
   ],
   relatedCalculators: ['cac-calculator', 'roi-calculator'],
 } satisfies CalculatorConfig

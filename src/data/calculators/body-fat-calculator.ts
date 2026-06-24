@@ -42,6 +42,8 @@ export default {
   faqs: [
     { q: 'How accurate is the US Navy method?', a: 'Within 3-5% of DEXA scans for most people. Accuracy varies by body type and hydration.' },
     { q: 'What is a healthy body fat percentage?', a: 'Men: 10-20%. Women: 18-28%. Athletes are typically lower.' },
+    { q: 'How often should I measure body fat?', a: 'Measure every 4 to 6 weeks to track meaningful trends, as daily fluctuations from hydration levels can skew individual results significantly.' },
+    { q: 'What is the best way to reduce body fat percentage?', a: 'Combine a moderate calorie deficit of 300 to 500 calories per day with resistance training to preserve muscle mass while losing fat.' },
   ],
   relatedCalculators: ['bmi-calculator', 'ideal-weight-calculator', 'calorie-calculator'],
   disclaimerType: 'health',

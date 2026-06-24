@@ -28,6 +28,8 @@ export default {
   faqs: [
     { q: 'How do I calculate annual income from hourly?', a: 'Multiply hourly rate by hours per week and then by 52 weeks.' },
     { q: 'Should I include bonuses in annual income?', a: 'Yes, include all guaranteed income. Bonuses can be estimated separately.' },
+    { q: 'What if I work variable hours each week?', a: 'Use your average weekly hours over the past several months to get the most accurate annual income estimate from this calculator.' },
+    { q: 'Does this calculator account for overtime pay?', a: 'Enter your base hourly rate for regular hours. Calculate overtime separately and add it to the annual result as additional income.' },
   ],
   relatedCalculators: ['monthly-income-calculator', 'salary-calculator', 'hourly-to-salary-calculator'],
 } satisfies CalculatorConfig

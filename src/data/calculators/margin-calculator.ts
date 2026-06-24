@@ -22,6 +22,8 @@ export default {
   faqs: [
     { q: 'What is the difference between margin and markup?', a: 'Margin is percentage of revenue, markup is percentage of cost. A 50% margin equals 100% markup.' },
     { q: 'What is a good profit margin?', a: 'It varies by industry. Retail margins range 20-50%, while services can be 60-80%.' },
+    { q: 'Why is understanding margin more important than just tracking profit dollars alone?', a: 'Margin percentage tells you the efficiency of your pricing strategy relative to revenue, while profit dollars alone do not reveal how well you are managing costs.' },
+    { q: 'How do discounts and sales promotions affect my overall profit margins?', a: 'A 20% discount requires roughly 25% more sales volume just to maintain the same gross profit dollars, significantly impacting your bottom line profitability.' },
   ],
   relatedCalculators: ['profit-calculator', 'markup-calculator', 'discount-calculator'],
 } satisfies CalculatorConfig

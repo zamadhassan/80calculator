@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'What credit score is needed for a business loan?', a: 'Requirements vary but most lenders prefer 680+ for traditional bank loans.' },
     { q: 'How long are typical business loan terms?', a: 'Term loans range 1-10 years depending on the lender and loan purpose.' },
+    { q: 'What documents are needed for a business loan application?', a: 'Lenders typically require tax returns, financial statements, a business plan, and proof of revenue for the past two years at minimum.' },
+    { q: 'How does a business loan affect my personal credit?', a: 'Most small business loans require a personal guarantee, meaning late payments will impact your personal credit score significantly if reported.' },
   ],
   relatedCalculators: ['simple-loan-calculator', 'loan-payment-calculator', 'amortization-schedule-calculator'],
   disclaimerType: 'finance',

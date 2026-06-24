@@ -29,6 +29,8 @@ export default {
   faqs: [
     { q: 'Does daily compounding make a big difference?', a: 'Over long periods, yes. Daily vs monthly compounding can add significant returns over decades.' },
     { q: 'What accounts use daily compounding?', a: 'Many high-yield savings accounts, money market accounts, and some CDs compound daily.' },
+    { q: 'How much difference does daily compounding make over 30 years?', a: 'On a $10,000 investment at 5 percent, daily compounding earns roughly $1,500 more than yearly compounding over a 30-year period.' },
+    { q: 'Are there accounts that compound interest daily?', a: 'Yes, many high-yield savings accounts, money market accounts, and online banks use daily compounding to maximize returns for their customers.' },
   ],
   relatedCalculators: ['compound-interest-calculator', 'interest-calculator', 'apy-calculator'],
   disclaimerType: 'finance',

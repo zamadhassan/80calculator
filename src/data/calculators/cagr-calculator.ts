@@ -20,6 +20,8 @@ export default {
   faqs: [
     { q: 'What is the difference between CAGR and average return?', a: 'CAGR shows the geometric mean return (compounded). Average return is arithmetic mean and can be misleading.' },
     { q: 'Is CAGR the same as annualized return?', a: 'Yes, CAGR and annualized return mean the same thing.' },
+    { q: 'Can CAGR be negative for a losing investment?', a: 'Yes, if the ending value is less than the beginning value, CAGR will be negative, indicating the investment lost value over that time period.' },
+    { q: 'How do I use CAGR to compare different investments?', a: 'Calculate CAGR for each investment over the exact same time period to fairly compare their annualized growth rates on an equal basis.' },
   ],
   relatedCalculators: ['roi-calculator', 'investment-return-calculator', 'irr-calculator'],
 } satisfies CalculatorConfig

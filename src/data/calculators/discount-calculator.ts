@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'How do I calculate a 20% discount?', a: 'Multiply the price by 0.20 to get the discount amount, then subtract from the original price.' },
     { q: 'Is discount calculated before or after tax?', a: 'Typically discount is applied before tax, but this can vary by store policy.' },
+    { q: 'How do I calculate a percentage discount in reverse?', a: 'Divide the sale price by the original price, subtract the result from 1, and multiply by 100 to find the discount percentage that was applied.' },
+    { q: 'What is a good discount strategy for retail clearance?', a: 'Start with 20 to 30 percent off, then increase to 50 to 75 percent over time, marking down every 2 to 3 weeks to clear inventory efficiently.' },
   ],
   relatedCalculators: ['margin-calculator', 'sales-tax-calculator', 'price-calculator'],
 } satisfies CalculatorConfig

@@ -30,6 +30,8 @@ export default {
   faqs: [
     { q: 'How do I calculate area of an irregular shape?', a: 'Divide it into regular shapes, calculate each area, then add them together.' },
     { q: 'What units does this use?', a: 'Input units are consistent (e.g., feet, meters). Output is in square units of the same measure.' },
+    { q: 'How do I calculate area for a room with an L-shape?', a: 'Divide the L-shape into two rectangles at the corner, calculate each rectangle area separately, then add them for the total area.' },
+    { q: 'Can I use meters instead of feet for inputs?', a: 'Yes, just keep your units consistent throughout. The area output will be in square units matching whatever input measure you choose.' },
   ],
   relatedCalculators: ['square-footage-calculator', 'cubic-yard-calculator', 'acreage-calculator'],
 } satisfies CalculatorConfig

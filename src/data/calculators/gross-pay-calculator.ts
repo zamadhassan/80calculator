@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'What is gross pay vs net pay?', a: 'Gross pay is total earnings before deductions. Net pay is take-home after taxes and deductions.' },
     { q: 'What deductions come from gross pay?', a: 'Federal/state taxes, Social Security, Medicare, health insurance, retirement contributions, and garnishments.' },
+    { q: 'How is overtime calculated for salaried employees earning below the threshold?', a: 'Salaried non-exempt employees must have their salary converted to an hourly rate by dividing by 40 hours, then overtime is paid at 1.5x that rate for hours over 40.' },
+    { q: 'Do double-time or special overtime rates affect gross pay calculations?', a: 'Some industries require double-time for holidays or hours beyond a certain limit. Replace the standard 1.5 multiplier with 2.0 for those special overtime calculations.' },
   ],
   relatedCalculators: ['net-pay-calculator', 'overtime-calculator', 'payroll-hours-calculator'],
 } satisfies CalculatorConfig

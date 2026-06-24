@@ -25,6 +25,8 @@ export default {
   faqs: [
     { q: 'How many pay periods in a year?', a: '12 monthly, 26 biweekly, or 52 weekly pay periods depending on employer schedule.' },
     { q: 'How many working days in a year?', a: 'Typically 260 weekdays (52 weeks × 5 days), excluding holidays.' },
+    { q: 'How do I negotiate a salary based on hourly equivalent?', a: 'Convert the offered salary to an hourly rate by dividing by 2,080 (40 hours × 52 weeks). This helps you compare salaried positions with hourly roles and understand the true value of the compensation package.' },
+    { q: 'What is the difference between gross and net salary?', a: 'Gross salary is the total amount before any deductions. Net salary (take-home pay) is what remains after taxes, Social Security, Medicare, health insurance premiums, and retirement contributions are subtracted.' },
   ],
   relatedCalculators: ['hourly-to-salary-calculator', 'annual-income-calculator', 'gross-pay-calculator'],
 } satisfies CalculatorConfig

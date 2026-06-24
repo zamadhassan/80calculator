@@ -26,6 +26,8 @@ export default {
   faqs: [
     { q: 'What is dimensional weight?', a: 'Dimensional weight (DIM) considers package volume, not just actual weight. Formula: L×W×H/139 for most carriers.' },
     { q: 'How can I reduce shipping costs?', a: 'Use smaller boxes, reduce packaging weight, negotiate rates, and use regional carriers.' },
+    { q: 'What is the difference between actual weight and billable weight?', a: 'Actual weight is the physical weight on a scale. Billable weight is the greater of actual weight or dimensional weight. Carriers charge by billable weight because lightweight but bulky packages take up valuable cargo space.' },
+    { q: 'How can I determine the right shipping carrier for my package?', a: 'Compare rates from USPS, UPS, FedEx, and regional carriers based on package size, weight, destination, and delivery speed. USPS is often cheapest for small packages, while UPS and FedEx may offer better rates for larger shipments.' },
   ],
   relatedCalculators: ['freight-class-calculator', 'fuel-cost-calculator'],
 } satisfies CalculatorConfig

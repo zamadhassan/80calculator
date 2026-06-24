@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'What is the typical density of crushed stone?', a: 'Crushed stone typically has a density of 100-120 lbs per cubic foot.' },
     { q: 'How do I calculate aggregate for a base layer?', a: 'Measure the area length, width, and compacted depth in feet, then use the formula above.' },
+    { q: 'What type of aggregate should I use for a driveway?', a: 'Crushed stone number 57 or 67 is best for driveways because it compacts well and provides excellent drainage under the surface layer.' },
+    { q: 'How much aggregate do I need for a base layer?', a: 'Multiply the area by compacted depth of 4-6 inches typical for base layers, then add roughly 10 percent for compaction loss and settling over time.' },
   ],
   relatedCalculators: ['gravel-calculator', 'cubic-yard-calculator', 'soil-calculator'],
   disclaimerType: 'construction',

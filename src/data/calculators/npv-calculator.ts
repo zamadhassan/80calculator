@@ -28,6 +28,8 @@ export default {
   faqs: [
     { q: 'What does a positive NPV mean?', a: 'Positive NPV means the investment is expected to generate more value than its cost, considering the time value of money.' },
     { q: 'What discount rate should I use?', a: 'Use your cost of capital or required rate of return. Often 8-15% depending on risk.' },
+    { q: 'What happens to NPV if I use a higher discount rate than expected?', a: 'A higher discount rate reduces the present value of future cash flows, making NPV lower. Projects become less attractive when the required rate of return increases.' },
+    { q: 'How does NPV compare with IRR for making investment decisions between projects?', a: 'NPV gives the actual dollar value added, while IRR shows the percentage return. For mutually exclusive projects, NPV is generally preferred over IRR for final decisions.' },
   ],
   relatedCalculators: ['irr-calculator', 'cagr-calculator', 'present-value-calculator'],
   disclaimerType: 'finance',

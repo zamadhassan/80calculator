@@ -30,6 +30,8 @@ export default {
   faqs: [
     { q: 'How deep should topsoil be for a garden?', a: 'Most gardens need 6-12 inches of topsoil for healthy plant growth.' },
     { q: 'How much does a yard of topsoil weigh?', a: 'A cubic yard of topsoil typically weighs 2,000-2,700 lbs (1-1.35 tons).' },
+    { q: 'What is the best soil type for vegetable gardens?', a: 'A loamy soil mix consisting of roughly 40% sand, 40% silt, and 20% clay is ideal for vegetable gardens. This combination provides good drainage while retaining enough moisture and nutrients for healthy plant growth.' },
+    { q: 'How much compost should I mix into my garden soil?', a: 'Mix 2-3 inches of compost into the top 6-8 inches of garden soil before planting. For established beds, add 1 inch of compost annually. Compost improves soil structure, drainage, and nutrient content naturally.' },
   ],
   relatedCalculators: ['gravel-calculator', 'cubic-yard-calculator', 'aggregate-calculator'],
   disclaimerType: 'construction',

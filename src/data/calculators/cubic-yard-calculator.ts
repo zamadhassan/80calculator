@@ -22,6 +22,8 @@ export default {
   faqs: [
     { q: 'How many cubic feet in a cubic yard?', a: '27 cubic feet = 1 cubic yard (3ft × 3ft × 3ft).' },
     { q: 'How do I convert cubic yards to tons?', a: 'Multiply cubic yards by material density. For gravel: ~1.4 tons/cu yd.' },
+    { q: 'How much does a cubic yard of topsoil weigh?', a: 'A cubic yard of dry topsoil weighs approximately 2,000 to 2,500 pounds, while wet topsoil can weigh up to 3,000 pounds or more.' },
+    { q: 'How do I measure a pile of dirt in cubic yards?', a: 'Approximate the pile as a cone shape using height and base diameter, then multiply by 0.33 for a reasonable cubic yard volume estimate.' },
   ],
   relatedCalculators: ['cubic-feet-calculator', 'concrete-yard-calculator', 'gravel-calculator'],
   disclaimerType: 'construction',

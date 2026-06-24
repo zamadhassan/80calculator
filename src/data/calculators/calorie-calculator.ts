@@ -40,6 +40,8 @@ export default {
   faqs: [
     { q: 'How many calories do I need daily?', a: 'Average adult women: 1,600-2,400. Men: 2,000-3,000 depending on activity.' },
     { q: 'How many calories to lose 1 lb per week?', a: 'A deficit of ~500 calories per day leads to ~1 lb weight loss per week.' },
+    { q: 'Should I eat back calories burned through exercise?', a: 'For weight loss, it is best not to eat back exercise calories since fitness trackers and estimates often overestimate actual calories burned during activity.' },
+    { q: 'How accurate are calorie calculators for weight maintenance?', a: 'They provide estimates within 10 to 15 percent of actual needs. Track your weight weekly and adjust intake up or down based on real results.' },
   ],
   relatedCalculators: ['bmr-calculator', 'calorie-deficit-calculator', 'maintenance-calorie-calculator'],
   disclaimerType: 'health',

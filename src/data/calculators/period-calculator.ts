@@ -30,6 +30,8 @@ export default {
   faqs: [
     { q: 'How accurate is period prediction?', a: 'Accuracy depends on cycle regularity. Irregular cycles make prediction less reliable.' },
     { q: 'What is a normal cycle length?', a: 'Cycle lengths of 21-35 days are considered normal. 28 days is the average.' },
+    { q: 'What should I do if my period prediction is consistently wrong each month?', a: 'Track your cycle for 3-6 months to find your average cycle length. Irregular cycles over 35 or under 21 days may warrant a consultation with a healthcare provider.' },
+    { q: 'How do hormonal contraceptives affect period prediction accuracy and cycle tracking?', a: 'Hormonal contraceptives like birth control pills create a controlled cycle, making period prediction very accurate since the timing is regulated by the medication rather than natural cycles.' },
   ],
   relatedCalculators: ['ovulation-calculator', 'bmi-calculator'],
   disclaimerType: 'period',

@@ -31,6 +31,8 @@ export default {
   faqs: [
     { q: 'How accurate is ovulation prediction?', a: 'Ovulation calculators provide estimates. Actual timing varies due to cycle irregularity and health factors.' },
     { q: 'What is the luteal phase?', a: 'The luteal phase is the time between ovulation and the next period, typically 12-16 days.' },
+    { q: 'Can stress or illness affect my ovulation date and fertile window timing?', a: 'Yes, stress, illness, travel, and significant weight changes can delay ovulation by several days or occasionally skip it entirely in a given cycle.' },
+    { q: 'How can I track ovulation more accurately than using a calculator alone?', a: 'Combine calendar tracking with ovulation predictor kits, basal body temperature charting, and cervical mucus observations for the most accurate fertility window identification.' },
   ],
   relatedCalculators: ['period-calculator', 'bmi-calculator'],
   disclaimerType: 'period',

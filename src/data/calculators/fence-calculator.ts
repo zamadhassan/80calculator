@@ -28,6 +28,8 @@ export default {
   faqs: [
     { q: 'How far apart should fence posts be?', a: 'Standard post spacing is 6-8 feet, depending on fence height and wind exposure.' },
     { q: 'Do I need concrete for fence posts?', a: 'Yes, concrete is recommended for setting posts to ensure stability, especially in windy areas.' },
+    { q: 'What type of wood is best for fence posts?', a: 'Pressure-treated pine or cedar is best for fence posts as they naturally resist rot and insect damage far better than untreated lumber.' },
+    { q: 'How deep should fence posts be buried?', a: 'Bury posts at least one-third of their total length, typically 24 to 30 inches deep, and set them in concrete for maximum stability.' },
   ],
   relatedCalculators: ['square-footage-calculator', 'concrete-calculator'],
   disclaimerType: 'construction',

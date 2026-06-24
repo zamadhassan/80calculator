@@ -18,6 +18,8 @@ export default {
   faqs: [
     { q: 'How do I calculate square footage of an irregular room?', a: 'Divide the room into rectangles, calculate each, and add them together.' },
     { q: 'What is the difference between sq ft and sq m?', a: '1 sq ft = 0.0929 sq m. Multiply sq ft by 0.0929 to get square meters.' },
+    { q: 'How do I calculate the square footage of a triangular space?', a: 'Measure the base and height of the triangle, multiply them together, then divide by 2. For example, a triangular area with a 12-foot base and 8-foot height equals 48 square feet (12 × 8 ÷ 2).' },
+    { q: 'How much paint do I need for a room based on square footage?', a: 'One gallon of paint typically covers approximately 350-400 square feet of wall space. Measure total wall area, subtract windows and doors, then divide by 350 for a conservative estimate of gallons needed.' },
   ],
   relatedCalculators: ['area-calculator', 'paint-calculator', 'tile-calculator'],
 } satisfies CalculatorConfig

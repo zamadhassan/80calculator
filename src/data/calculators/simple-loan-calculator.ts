@@ -23,6 +23,8 @@ export default {
   faqs: [
     { q: 'What is APR vs interest rate?', a: 'APR includes fees and costs beyond the interest rate, giving a more complete cost picture.' },
     { q: 'Can I pay off my loan early?', a: 'Most loans allow early payoff but some charge prepayment penalties. Check your terms.' },
+    { q: 'What factors affect my monthly loan payment the most?', a: 'The loan amount has the biggest impact on monthly payments, followed by the interest rate and loan term. A lower interest rate or longer term reduces monthly payments, but a longer term also increases total interest paid.' },
+    { q: 'How does a down payment affect my loan?', a: 'A larger down payment reduces the principal amount borrowed, which lowers monthly payments and total interest. A 20% down payment can also eliminate private mortgage insurance (PMI) on home loans.' },
   ],
   relatedCalculators: ['business-loan-calculator', 'loan-amortization-calculator', 'apr-calculator'],
   disclaimerType: 'finance',

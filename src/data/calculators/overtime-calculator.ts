@@ -24,6 +24,8 @@ export default {
   faqs: [
     { q: 'What is the standard overtime rate?', a: 'In the US, the standard overtime rate is 1.5x (time-and-a-half) for hours over 40.' },
     { q: 'Do all employees qualify for overtime?', a: 'No, exempt employees (typically salaried managers/professionals) may not qualify.' },
+    { q: 'Are there different overtime rules for different states or countries?', a: 'Yes, overtime laws vary significantly. California requires daily overtime after 8 hours while other states follow federal FLSA rules of overtime after 40 weekly hours.' },
+    { q: 'How is overtime calculated when an employee works on a holiday or weekend?', a: 'Holiday and weekend work does not automatically qualify for overtime unless it pushes total weekly hours beyond 40, though some employers voluntarily offer premium holiday pay rates.' },
   ],
   relatedCalculators: ['time-card-calculator', 'hourly-to-salary-calculator', 'gross-pay-calculator'],
 } satisfies CalculatorConfig

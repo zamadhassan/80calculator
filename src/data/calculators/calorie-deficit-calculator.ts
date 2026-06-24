@@ -22,6 +22,8 @@ export default {
   faqs: [
     { q: 'What is a safe calorie deficit?', a: 'A deficit of 300-500 calories per day is safe and sustainable for most people.' },
     { q: 'Can I lose weight too fast?', a: 'Losing more than 1-2 lbs per week can lead to muscle loss, nutrient deficiencies, and metabolic slowdown.' },
+    { q: 'Can I create a deficit through exercise alone?', a: 'Yes, but combining diet and exercise is more effective and sustainable than relying on exercise alone for creating a calorie deficit.' },
+    { q: 'What happens if my deficit is too large for too long?', a: 'Extreme deficits can cause muscle loss, metabolic adaptation, hormonal imbalances, and increased risk of nutrient deficiencies over extended periods.' },
   ],
   relatedCalculators: ['calorie-calculator', 'maintenance-calorie-calculator', 'bmi-calculator'],
   disclaimerType: 'health',

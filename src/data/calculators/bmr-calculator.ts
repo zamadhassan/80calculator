@@ -26,6 +26,8 @@ export default {
   faqs: [
     { q: 'What is BMR?', a: 'Basal Metabolic Rate is the calories your body burns at complete rest for basic functions like breathing and circulation.' },
     { q: 'How accurate is the Mifflin-St Jeor formula?', a: 'It is considered the most accurate BMR formula for the general population, within 10% of measured values.' },
+    { q: 'Does BMR change with age?', a: 'Yes, BMR decreases by about 1 to 2 percent per decade after age 20 due to natural muscle loss and hormonal changes over time.' },
+    { q: 'How do I use BMR to set weight loss goals?', a: 'Subtract 300 to 500 calories from your daily maintenance needs, which is BMR times your activity factor, for safe and sustainable weight loss.' },
   ],
   relatedCalculators: ['bmi-calculator', 'calorie-calculator', 'maintenance-calorie-calculator'],
   disclaimerType: 'health',

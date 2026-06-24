@@ -22,6 +22,8 @@ export default {
   faqs: [
     { q: 'What is a good ROI?', a: 'A positive ROI means profit. Above 10-20% is generally considered good, but it varies by industry.' },
     { q: 'Does ROI consider time?', a: 'Basic ROI does not. For time-adjusted returns, use CAGR or IRR calculators.' },
+    { q: 'What does a negative ROI indicate?', a: 'A negative ROI means your investment lost money - the returns were less than the initial investment. This indicates the project or investment underperformed and may need to be reevaluated or discontinued.' },
+    { q: 'How can I improve my investment ROI?', a: 'Increase returns through better marketing, pricing strategies, or operational improvements while reducing costs. Regularly tracking ROI helps identify which investments perform best so you can allocate resources more effectively.' },
   ],
   relatedCalculators: ['cagr-calculator', 'irr-calculator', 'profit-calculator'],
 } satisfies CalculatorConfig
