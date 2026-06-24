@@ -51,28 +51,35 @@ export default function Calculator({ config }: { config: CalculatorConfig }) {
         { label: config.category, href: `/category/${config.slug.split('-').slice(0, -1).join('-') || 'construction'}-calculators` },
         { label: config.h1, href: `/${config.slug}` },
       ]} />
-      <h1 className="mt-4 text-3xl font-bold text-brand sm:text-4xl">{config.h1}</h1>
-      <p className="mt-2 text-lg text-white/70">{config.intro}</p>
 
-      <div className="mt-8 rounded-xl border border-white/10 bg-brand-dark-2 p-6">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 animate-fade-in">
+        <h1 className="text-3xl font-bold sm:text-4xl">
+          <span className="gradient-gold-text">{config.h1}</span>
+        </h1>
+        <p className="mt-2 text-lg text-white/50 leading-relaxed">{config.intro}</p>
+      </div>
+
+      <div className="mt-8 card-glass animate-slide-up">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {config.inputs.map(input => (
-            <div key={input.id}>
-              <label className="mb-1 block text-sm font-medium text-white/80">{input.label}</label>
+            <div key={input.id} className="group">
+              <label className="mb-1.5 block text-sm font-medium text-white/60 group-focus-within:text-brand transition-colors">
+                {input.label}
+              </label>
               {input.type === 'select' && input.options ? (
                 <select
-                  className="w-full rounded-lg border border-white/10 bg-brand-dark-3 px-3 py-2 text-white focus:border-brand focus:outline-none"
+                  className="select-modern"
                   value={values[input.id] ?? input.defaultValue ?? ''}
                   onChange={e => handleInput(input.id, Number(e.target.value))}
                 >
                   {input.options.map(o => (
-                    <option key={o.value} value={o.value}>{o.label}</option>
+                    <option key={o.value} value={o.value} className="bg-brand-dark text-white">{o.label}</option>
                   ))}
                 </select>
               ) : (
                 <input
                   type="number"
-                  className="w-full rounded-lg border border-white/10 bg-brand-dark-3 px-3 py-2 text-white placeholder-white/30 focus:border-brand focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  className="input-modern"
                   placeholder={input.placeholder || '0'}
                   min={input.min}
                   max={input.max}
@@ -84,32 +91,43 @@ export default function Calculator({ config }: { config: CalculatorConfig }) {
             </div>
           ))}
         </div>
-        {error && <p className="mt-3 text-sm text-red-400">{error}</p>}
+
+        {error && (
+          <div className="mt-4 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400 animate-scale-in">
+            {error}
+          </div>
+        )}
+
         <div className="mt-6 flex gap-3">
-          <button
-            onClick={calculate}
-            className="rounded-lg bg-brand px-6 py-2.5 font-semibold text-black transition hover:bg-brand-light"
-          >
+          <button onClick={calculate} className="btn-primary">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
             Calculate
           </button>
-          <button
-            onClick={reset}
-            className="rounded-lg border border-white/20 px-6 py-2.5 font-medium text-white transition hover:bg-white/10"
-          >
+          <button onClick={reset} className="btn-secondary">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
             Reset
           </button>
         </div>
       </div>
 
-      {result && <ResultCard result={result} />}
+      {result && (
+        <div className="mt-6 animate-scale-in">
+          <ResultCard result={result} />
+        </div>
+      )}
       {result && <FormulaBlock formula={config.formula} example={config.example} />}
       {result && <ExampleBlock example={config.example} />}
 
       {config.useCases.length > 0 && (
-        <div className="mt-8">
-          <h2 className="text-xl font-semibold text-brand-light">Use Cases</h2>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-white/70">
-            {config.useCases.map((uc, i) => <li key={i}>{uc}</li>)}
+        <div className="mt-8 card-glass animate-slide-up">
+          <h2 className="text-xl font-semibold">Use Cases</h2>
+          <ul className="mt-4 space-y-2">
+            {config.useCases.map((uc, i) => (
+              <li key={i} className="flex items-start gap-3 text-white/60">
+                <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-xs text-brand">✓</span>
+                {uc}
+              </li>
+            ))}
           </ul>
         </div>
       )}

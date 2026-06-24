@@ -17,8 +17,14 @@ export default function Disclaimer({ type }: { type: DisclaimerType }) {
   if (!text) return null
 
   return (
-    <div className="mt-8 rounded-xl border border-white/10 bg-brand-dark-2 p-4 text-sm text-white/50">
-      <strong className="text-white/70">Disclaimer:</strong> {text}
+    <div className="mt-8 rounded-xl border border-amber-500/10 bg-amber-500/[0.03] px-5 py-4 animate-fade-in">
+      <div className="flex items-start gap-3">
+        <span className="mt-0.5 text-amber-400/60 text-sm">⚠</span>
+        <div>
+          <strong className="text-xs uppercase tracking-wider text-amber-400/60">Disclaimer:</strong>
+          <p className="mt-1 text-sm text-white/40 leading-relaxed">{text}</p>
+        </div>
+      </div>
     </div>
   )
 }

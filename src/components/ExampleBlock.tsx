@@ -5,15 +5,20 @@ interface Example {
 
 export default function ExampleBlock({ example }: { example: Example }) {
   return (
-    <div className="mt-6 rounded-xl border border-white/10 bg-brand-dark-2 p-6">
-      <h2 className="text-xl font-semibold text-brand-light">Example</h2>
-      <div className="mt-2 space-y-1 text-white/70">
+    <div className="mt-6 card-glass animate-slide-up">
+      <h2 className="text-xl font-semibold gradient-gold-text">Example</h2>
+      <div className="mt-3 space-y-2">
         {Object.entries(example.inputs).map(([key, val]) => (
-          <p key={key}>
-            <span className="capitalize">{key.replace(/([A-Z])/g, ' $1')}:</span> {val}
-          </p>
+          <div key={key} className="flex items-center gap-2 rounded-lg bg-white/[0.02] px-4 py-2 border border-white/[0.04]">
+            <span className="text-sm text-white/40 capitalize w-32">
+              {key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase())}:
+            </span>
+            <span className="text-sm text-white/70 font-medium">{val}</span>
+          </div>
         ))}
-        <p className="mt-2 font-medium text-brand">{example.result}</p>
+        <div className="mt-3 rounded-xl gradient-gold px-4 py-3">
+          <p className="text-sm font-medium text-black/80">Result: <span className="font-bold">{example.result}</span></p>
+        </div>
       </div>
     </div>
   )

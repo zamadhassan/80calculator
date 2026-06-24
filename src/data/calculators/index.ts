@@ -1,40 +1,98 @@
-import roofing from './roofing-calculator'
-import roofPitch from './roof-pitch-calculator'
+import type { CalculatorConfig } from '@/types/calculator'
+
+import acreage from './acreage-calculator'
+import aggregate from './aggregate-calculator'
+import amortizationSchedule from './amortization-schedule-calculator'
+import annualIncome from './annual-income-calculator'
+import apr from './apr-calculator'
+import apy from './apy-calculator'
+import area from './area-calculator'
+import asphalt from './asphalt-calculator'
+import bmi from './bmi-calculator'
+import bmr from './bmr-calculator'
+import bodyFat from './body-fat-calculator'
+import breakEven from './break-even-calculator'
+import brick from './brick-calculator'
+import businessLoan from './business-loan-calculator'
+import cac from './cac-calculator'
+import cagr from './cagr-calculator'
+import calorie from './calorie-calculator'
+import calorieDeficit from './calorie-deficit-calculator'
+import cement from './cement-calculator'
+import compoundInterest from './compound-interest-calculator'
 import concrete from './concrete-calculator'
 import concreteYard from './concrete-yard-calculator'
-import cement from './cement-calculator'
-import gravel from './gravel-calculator'
-import asphalt from './asphalt-calculator'
-import paint from './paint-calculator'
-import brick from './brick-calculator'
-import squareFootage from './square-footage-calculator'
-import margin from './margin-calculator'
-import profit from './profit-calculator'
+import creditCardPayoff from './credit-card-payoff-calculator'
+import cubicFeet from './cubic-feet-calculator'
+import cubicYard from './cubic-yard-calculator'
+import dailyCompoundInterest from './daily-compound-interest-calculator'
+import debtPayoff from './debt-payoff-calculator'
 import discount from './discount-calculator'
-import roi from './roi-calculator'
+import fence from './fence-calculator'
+import freightClass from './freight-class-calculator'
+import fuelCost from './fuel-cost-calculator'
+import futureValue from './future-value-calculator'
+import gasMileage from './gas-mileage-calculator'
+import gravel from './gravel-calculator'
+import grossPay from './gross-pay-calculator'
+import hourlyToSalary from './hourly-to-salary-calculator'
+import hourlyWage from './hourly-wage-calculator'
+import hours from './hours-calculator'
+import idealWeight from './ideal-weight-calculator'
+import interest from './interest-calculator'
+import investment from './investment-calculator'
+import investmentReturn from './investment-return-calculator'
+import irr from './irr-calculator'
+import loanAmortization from './loan-amortization-calculator'
+import loanPayment from './loan-payment-calculator'
 import ltv from './ltv-calculator'
+import maintenanceCalorie from './maintenance-calorie-calculator'
+import margin from './margin-calculator'
+import markup from './markup-calculator'
+import mileage from './mileage-calculator'
+import monthlyIncome from './monthly-income-calculator'
+import netPay from './net-pay-calculator'
+import npv from './npv-calculator'
+import overtime from './overtime-calculator'
+import ovulation from './ovulation-calculator'
+import paint from './paint-calculator'
+import payrollHours from './payroll-hours-calculator'
+import period from './period-calculator'
+import presentValue from './present-value-calculator'
+import price from './price-calculator'
+import profit from './profit-calculator'
+import protein from './protein-calculator'
+import roi from './roi-calculator'
+import roofPitch from './roof-pitch-calculator'
+import roofing from './roofing-calculator'
+import salary from './salary-calculator'
+import salesTax from './sales-tax-calculator'
+import shipping from './shipping-calculator'
+import simpleInterest from './simple-interest-calculator'
+import simpleLoan from './simple-loan-calculator'
+import soil from './soil-calculator'
+import squareFeet from './square-feet-calculator'
+import squareFootage from './square-footage-calculator'
+import stair from './stair-calculator'
+import takeHomePay from './take-home-pay-calculator'
+import tile from './tile-calculator'
 import timeCard from './time-card-calculator'
+import timeClock from './time-clock-calculator'
 import timesheet from './timesheet-calculator'
 import workHours from './work-hours-calculator'
-import hours from './hours-calculator'
-import overtime from './overtime-calculator'
-import hourlyToSalary from './hourly-to-salary-calculator'
-import businessLoan from './business-loan-calculator'
-import simpleLoan from './simple-loan-calculator'
-import loanPayment from './loan-payment-calculator'
-import compoundInterest from './compound-interest-calculator'
-import simpleInterest from './simple-interest-calculator'
-import creditCardPayoff from './credit-card-payoff-calculator'
-import bmi from './bmi-calculator'
-import period from './period-calculator'
-import ovulation from './ovulation-calculator'
 
 export default [
-  roofing, roofPitch, concrete, concreteYard, cement,
-  gravel, asphalt, paint, brick, squareFootage,
-  margin, profit, discount, roi, ltv,
-  timeCard, timesheet, workHours, hours, overtime,
-  hourlyToSalary, businessLoan, simpleLoan, loanPayment,
-  compoundInterest, simpleInterest, creditCardPayoff,
-  bmi, period, ovulation,
-]
+  acreage, aggregate, amortizationSchedule, annualIncome, apr,
+  apy, area, asphalt, bmi, bmr, bodyFat, breakEven, brick,
+  businessLoan, cac, cagr, calorie, calorieDeficit, cement,
+  compoundInterest, concrete, concreteYard, creditCardPayoff,
+  cubicFeet, cubicYard, dailyCompoundInterest, debtPayoff, discount,
+  fence, freightClass, fuelCost, futureValue, gasMileage, gravel,
+  grossPay, hourlyToSalary, hourlyWage, hours, idealWeight, interest,
+  investment, investmentReturn, irr, loanAmortization, loanPayment, ltv,
+  maintenanceCalorie, margin, markup, mileage, monthlyIncome, netPay,
+  npv, overtime, ovulation, paint, payrollHours, period, presentValue,
+  price, profit, protein, roi, roofPitch, roofing, salary, salesTax,
+  shipping, simpleInterest, simpleLoan, soil, squareFeet, squareFootage,
+  stair, takeHomePay, tile, timeCard, timeClock, timesheet, workHours,
+] as CalculatorConfig[]

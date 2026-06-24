@@ -5,9 +5,11 @@ interface Example {
 
 export default function FormulaBlock({ formula, example }: { formula: string; example?: Example }) {
   return (
-    <div className="mt-6 rounded-xl border border-white/10 bg-brand-dark-2 p-6">
-      <h2 className="text-xl font-semibold text-brand-light">Formula / Logic</h2>
-      <p className="mt-2 text-white/70">{formula}</p>
+    <div className="mt-6 card-glass animate-slide-up">
+      <h2 className="text-xl font-semibold gradient-gold-text">Formula / Logic</h2>
+      <div className="mt-3 rounded-xl bg-white/[0.02] border border-white/[0.04] px-4 py-3">
+        <p className="text-white/60 leading-relaxed">{formula}</p>
+      </div>
     </div>
   )
 }

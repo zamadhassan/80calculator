@@ -2,24 +2,31 @@ import type { MetadataRoute } from 'next'
 import { getAllCalculators } from '@/data/index'
 import { categories } from '@/data/categories'
 
+const siteUrl = 'https://80calculator.vercel.app'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const calculators = getAllCalculators()
   const calcUrls = calculators.map(c => ({
-    url: `https://nexoracalculators.vercel.app/${c.slug}`,
+    url: `${siteUrl}/${c.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
   const catUrls = categories.map(c => ({
-    url: `https://nexoracalculators.vercel.app/category/${c.slug}`,
+    url: `${siteUrl}/category/${c.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
   return [
-    { url: 'https://nexoracalculators.vercel.app', lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
+    {
+      url: siteUrl,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 1.0,
+    },
     ...catUrls,
     ...calcUrls,
   ]
