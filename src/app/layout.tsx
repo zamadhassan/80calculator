@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     siteName: "Nexora Calculators",
     locale: "en_US",
     type: "website",
-    images: [{ url: `${siteUrl}/og-image.png`, width: 1200, height: 630, alt: "Nexora Calculators" }],
+    images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: "Nexora Calculators" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nexora Calculators",
     description:
       "Fast, free online calculators for work, money, health, and home projects.",
-    images: [`${siteUrl}/og-image.png`],
+    images: [`${siteUrl}/og-image.svg`],
   },
   alternates: { canonical: siteUrl },
   category: "technology",
@@ -60,7 +60,6 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Nexora Creation",
     url: siteUrl,
-    logo: `${siteUrl}/logo.png`,
     description: "Provider of free online calculators and tools.",
   };
 
@@ -106,23 +105,25 @@ export default function RootLayout({
               <span className="hidden sm:inline text-lg font-light text-white/40">Calculators</span>
             </Link>
 
-            <nav className="hidden md:flex items-center gap-1">
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
               <Link href="/" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
                 Home
               </Link>
               <div className="relative group">
-                <button className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                <button className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all flex items-center gap-1" aria-haspopup="true" aria-expanded="false">
                   Categories
-                  <svg className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  <svg className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </button>
-                <div className="absolute top-full right-0 mt-1 w-64 rounded-xl border border-white/[0.06] bg-[#1c1c1c] p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="absolute top-full right-0 mt-1 w-64 rounded-xl border border-white/[0.06] bg-[#1c1c1c] p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200" role="menu">
                   {categories.map(cat => (
                     <Link
                       key={cat.slug}
                       href={`/category/${cat.slug}`}
                       className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/5 transition-all"
+                      role="menuitem"
                     >
-                      <span className="text-base">{cat.icon}</span>
+                      <span className="text-base" aria-hidden="true">{cat.icon}</span>
                       {cat.name}
                     </Link>
                   ))}
@@ -140,13 +141,31 @@ export default function RootLayout({
               >
                 Get Started
               </Link>
+
+              {/* Mobile hamburger */}
+              <details className="md:hidden relative group">
+                <summary className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 text-white/60 hover:text-brand hover:border-brand/30 transition-all cursor-pointer list-none [&::-webkit-details-marker]:hidden" aria-label="Toggle menu">
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </summary>
+                <div className="absolute top-full right-0 mt-2 w-56 rounded-xl border border-white/[0.06] bg-[#1c1c1c] p-2 shadow-2xl z-50" role="menu">
+                  <Link href="/" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">Home</Link>
+                  <div className="h-px bg-white/[0.06] my-1" />
+                  <p className="px-3 py-1.5 text-xs text-white/30 uppercase tracking-wider">Categories</p>
+                  {categories.map(cat => (
+                    <Link key={cat.slug} href={`/category/${cat.slug}`} className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/5 transition-all" role="menuitem">
+                      <span className="text-base" aria-hidden="true">{cat.icon}</span>
+                      {cat.name}
+                    </Link>
+                  ))}
+                </div>
+              </details>
             </div>
           </div>
         </header>
 
         <main className="flex-1">{children}</main>
 
-        <footer className="border-t border-white/[0.06] mt-20">
+        <footer className="border-t border-white/[0.06] mt-20" role="contentinfo">
           <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
               <div>
@@ -166,7 +185,6 @@ export default function RootLayout({
                   <li><Link href="/loan-payment-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">Loan Payment</Link></li>
                   <li><Link href="/calorie-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">Calorie Calculator</Link></li>
                   <li><Link href="/compound-interest-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">Compound Interest</Link></li>
-                  <li><Link href="/mortgage-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">Mortgage Calculator</Link></li>
                 </ul>
               </div>
               <div>
