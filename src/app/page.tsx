@@ -1,15 +1,30 @@
 import Link from 'next/link'
+import Script from 'next/script'
 import { getAllCalculators } from '@/data/index'
 import { categories } from '@/data/categories'
 import SearchBar from '@/components/SearchBar'
 import CalculatorIcon from '@/components/CalculatorIcon'
 
+const siteUrl = 'https://80calculator.vercel.app'
+
 export default function Home() {
   const calculators = getAllCalculators()
   const popular = calculators.slice(0, 8)
 
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: calculators.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${siteUrl}/${c.slug}`,
+      name: c.h1,
+    })),
+  }
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       {/* Hero */}
       <section className="text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-4 py-1.5 text-sm text-brand/80">

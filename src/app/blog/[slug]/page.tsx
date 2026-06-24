@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Script from 'next/script'
 import { blogPosts } from '@/data/blog'
 import { notFound } from 'next/navigation'
 
@@ -16,15 +17,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find(p => p.slug === slug)
   if (!post) return {}
   return {
-    title: post.title,
+    title: `${post.title} | Nexora Calculators Blog`,
     description: post.description,
+    keywords: `${post.category.toLowerCase()}, ${post.title.toLowerCase()}, calculator guide, free online calculator tips`,
     openGraph: {
       title: post.title,
       description: post.description,
       url: `${siteUrl}/blog/${post.slug}`,
+      siteName: 'Nexora Calculators',
+      locale: 'en_US',
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+      images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -42,8 +47,31 @@ export default async function BlogPostPage({ params }: Props) {
 
   const paragraphs = post.content.split('\n\n')
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    author: { '@type': 'Person', name: post.author },
+    datePublished: post.date,
+    publisher: { '@type': 'Organization', name: 'Nexora Creation' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteUrl}/blog/${post.slug}` },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `${siteUrl}/blog/${post.slug}` },
+    ],
+  }
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+      <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Link href="/blog" className="inline-flex items-center gap-1 text-sm text-white/40 transition-colors hover:text-brand mb-8">
         <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
         Back to Blog

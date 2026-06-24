@@ -17,13 +17,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const config = getCalculator(slug)
   if (!config) return {}
+  const category = categories.find(c => c.name === config.category)
+  const keywords = [
+    config.h1.toLowerCase(), 'free online calculator', 'instant results',
+    ...config.useCases.map(u => u.toLowerCase()),
+    ...config.faqs.map(f => f.q.toLowerCase().replace(/[?]/g, '')),
+  ].filter(Boolean)
   return {
     title: config.title,
     description: config.metaDescription,
+    keywords: keywords.slice(0, 15).join(', '),
     openGraph: {
       title: config.title,
       description: config.metaDescription,
       url: `${siteUrl}/${config.slug}`,
+      siteName: 'Nexora Calculators',
+      locale: 'en_US',
       type: 'website',
       images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: config.h1 }],
     },

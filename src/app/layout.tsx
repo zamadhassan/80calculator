@@ -19,11 +19,13 @@ export const metadata: Metadata = {
     template: "%s | Nexora Calculators",
   },
   description:
-    "Free online calculators for work, money, health, and home projects. 80+ calculators with instant results — no signup required.",
+    "Free online calculators for work, money, health, and home projects. 90+ calculators with instant results — no signup required.",
   keywords: [
     "online calculator", "free calculator", "BMI calculator", "loan calculator",
     "mortgage calculator", "calorie calculator", "construction calculator",
     "investment calculator", "financial calculator", "health calculator",
+    "age calculator", "percentage calculator", "unit converter", "salary calculator",
+    "compound interest", "concrete calculator", "body fat calculator", "ovulation calculator",
   ],
   authors: [{ name: "Nexora Creation" }],
   creator: "Nexora Creation",
@@ -83,6 +85,11 @@ export default function RootLayout({
     <html lang="en" className="h-full scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta name="theme-color" content="#1c1c1c" />
+        <meta name="application-name" content="Nexora Calculators" />
+        <meta name="google-site-verification" content="VkF8mI-MiJ5pBGYyMqFrHFqE5A4ZIOgx3xlsZ_qR1bc" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
