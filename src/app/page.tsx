@@ -37,7 +37,7 @@ export default function Home() {
               <Link
                 key={cat.slug}
                 href={`/category/${cat.slug}`}
-                className="card-glass-hover group animate-slide-up opacity-0"
+                className="card-glass-hover group animate-slide-up"
                 style={{ animationDelay: `${i * 0.05}s`, animationFillMode: 'forwards' }}
               >
                 <div className="flex items-start gap-4">
@@ -77,7 +77,7 @@ export default function Home() {
               key={c.slug}
               href={`/${c.slug}`}
               data-calc={c.h1.toLowerCase()}
-              className="card-glass-hover group animate-slide-up opacity-0"
+              className="card-glass-hover group animate-slide-up"
               style={{ animationDelay: `${i * 0.05}s`, animationFillMode: 'forwards' }}
             >
               <h3 className="font-medium text-white group-hover:text-brand transition-colors">{c.h1}</h3>
@@ -94,7 +94,7 @@ export default function Home() {
             const catCalcs = calculators.filter(c => c.category === cat.name)
             if (catCalcs.length === 0) return null
             return (
-              <div key={cat.slug} className="animate-slide-up opacity-0" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+              <div key={cat.slug} className="animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
                 <div className="flex items-center gap-3">
                   <span className="text-xl">{cat.icon}</span>
                   <Link href={`/category/${cat.slug}`} className="group inline-flex items-center gap-2">

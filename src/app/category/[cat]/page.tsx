@@ -76,7 +76,7 @@ export default async function CategoryPage({ params }: Props) {
           <Link
             key={c.slug}
             href={`/${c.slug}`}
-            className="card-glass-hover animate-slide-up opacity-0"
+            className="card-glass-hover animate-slide-up"
             style={{ animationDelay: `${i * 0.03}s`, animationFillMode: 'forwards' }}
           >
             <h2 className="text-lg font-semibold text-white group-hover:text-brand transition-colors">{c.h1}</h2>

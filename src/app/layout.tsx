@@ -6,6 +6,7 @@ import "./globals.css";
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 const siteUrl = "https://80calculator.vercel.app";

@@ -48,6 +48,7 @@ body {
 }
 
 .gradient-gold-text {
+  color: #FEC700;
   background: linear-gradient(135deg, #FEC700 0%, #FDD14D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -97,13 +98,13 @@ body {
   animation: shimmer 2s ease-in-out infinite;
 }
 
-/* --- Staggered animation delays --- */
-.stagger-1 { animation-delay: 0.05s; }
-.stagger-2 { animation-delay: 0.1s; }
-.stagger-3 { animation-delay: 0.15s; }
-.stagger-4 { animation-delay: 0.2s; }
-.stagger-5 { animation-delay: 0.25s; }
-.stagger-6 { animation-delay: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in, .animate-slide-up, .animate-scale-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 
 /* --- Inputs --- */
 .input-modern {
@@ -251,6 +252,7 @@ body {
 /* --- Result values --- */
 .result-value {
   font-weight: 600;
+  color: #FEC700;
   background: linear-gradient(135deg, #FEC700 0%, #FDD14D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -262,6 +264,7 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
+  color: #FEC700;
   background: linear-gradient(135deg, #FEC700 0%, #FDD14D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
