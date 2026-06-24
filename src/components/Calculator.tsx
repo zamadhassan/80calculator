@@ -25,7 +25,7 @@ export default function Calculator({ config }: { config: CalculatorConfig }) {
     const required = config.inputs.filter(i => i.required !== false).map(i => i.id)
     for (const key of required) {
       if (values[key] === undefined || isNaN(values[key]) || values[key] < 0) {
-        setError(`Please enter a valid value for all fields.`)
+        setError('Please enter a valid value for all fields.')
         return
       }
     }
@@ -52,23 +52,30 @@ export default function Calculator({ config }: { config: CalculatorConfig }) {
         { label: config.h1, href: `/${config.slug}` },
       ]} />
 
-      <div className="mt-6 animate-fade-in">
-        <h1 className="text-3xl font-bold sm:text-4xl">
-          <span className="gradient-gold-text">{config.h1}</span>
+      <div className="mt-8">
+        <h1 className="text-3xl font-bold sm:text-4xl tracking-tight">
+          <span className="bg-gradient-to-r from-brand via-brand-light to-brand bg-clip-text text-transparent">{config.h1}</span>
         </h1>
         <p className="mt-2 text-lg text-white/50 leading-relaxed">{config.intro}</p>
       </div>
 
-      <div className="mt-8 card-glass animate-slide-up">
+      {/* Calculator Form */}
+      <div className="mt-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {config.inputs.map(input => (
-            <div key={input.id} className="group">
-              <label className="mb-1.5 block text-sm font-medium text-white/60 group-focus-within:text-brand transition-colors">
+            <div key={input.id}>
+              <label className="mb-1.5 block text-sm font-medium text-white/60">
                 {input.label}
               </label>
               {input.type === 'select' && input.options ? (
                 <select
-                  className="select-modern"
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white transition-all duration-200 appearance-none cursor-pointer focus:border-brand/50 focus:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-brand/20"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23FEC700' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right 16px center',
+                    paddingRight: '40px',
+                  }}
                   value={values[input.id] ?? input.defaultValue ?? ''}
                   onChange={e => handleInput(input.id, Number(e.target.value))}
                 >
@@ -79,7 +86,7 @@ export default function Calculator({ config }: { config: CalculatorConfig }) {
               ) : (
                 <input
                   type="number"
-                  className="input-modern"
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-white/20 transition-all duration-200 focus:border-brand/50 focus:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-brand/20"
                   placeholder={input.placeholder || '0'}
                   min={input.min}
                   max={input.max}
@@ -93,38 +100,40 @@ export default function Calculator({ config }: { config: CalculatorConfig }) {
         </div>
 
         {error && (
-          <div className="mt-4 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400 animate-scale-in">
+          <div className="mt-4 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400">
             {error}
           </div>
         )}
 
         <div className="mt-6 flex gap-3">
-          <button onClick={calculate} className="btn-primary">
+          <button
+            onClick={calculate}
+            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand to-brand-light px-6 py-3 font-semibold text-black transition-all hover:brightness-110 active:scale-95"
+          >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
             Calculate
           </button>
-          <button onClick={reset} className="btn-secondary">
+          <button
+            onClick={reset}
+            className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 font-medium text-white transition-all hover:bg-white/5 active:scale-95"
+          >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
             Reset
           </button>
         </div>
       </div>
 
-      {result && (
-        <div className="mt-6 animate-scale-in">
-          <ResultCard result={result} />
-        </div>
-      )}
-      {result && <FormulaBlock formula={config.formula} example={config.example} />}
+      {result && <ResultCard result={result} />}
+      {result && <FormulaBlock formula={config.formula} />}
       {result && <ExampleBlock example={config.example} />}
 
       {config.useCases.length > 0 && (
-        <div className="mt-8 card-glass animate-slide-up">
-          <h2 className="text-xl font-semibold">Use Cases</h2>
-          <ul className="mt-4 space-y-2">
+        <div className="mt-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8">
+          <h2 className="text-lg font-semibold text-white">Use Cases</h2>
+          <ul className="mt-4 space-y-3">
             {config.useCases.map((uc, i) => (
-              <li key={i} className="flex items-start gap-3 text-white/60">
-                <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-xs text-brand">✓</span>
+              <li key={i} className="flex items-start gap-3 text-sm text-white/60">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-xs text-brand">✓</span>
                 {uc}
               </li>
             ))}

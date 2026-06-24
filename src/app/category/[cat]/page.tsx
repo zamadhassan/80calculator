@@ -60,26 +60,28 @@ export default async function CategoryPage({ params }: Props) {
         <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
         Home
       </Link>
-      <div className="mt-4 flex items-center gap-4">
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-2xl">{category.icon}</div>
+      <div className="mt-6 flex items-center gap-4">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand/20 to-brand/5 text-2xl">{category.icon}</div>
         <div>
-          <h1 className="text-3xl font-bold sm:text-4xl">
-            <span className="gradient-gold-text">{category.name}</span>
-            <span className="text-white/40 text-xl font-normal ml-2">({calculators.length})</span>
+          <h1 className="text-3xl font-bold sm:text-4xl tracking-tight">
+            <span className="bg-gradient-to-r from-brand via-brand-light to-brand bg-clip-text text-transparent">{category.name}</span>
+            <span className="text-white/30 text-xl font-normal ml-2">({calculators.length})</span>
           </h1>
           <p className="mt-1 text-white/50">{category.description}</p>
         </div>
       </div>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {calculators.map((c, i) => (
+        {calculators.map(c => (
           <Link
             key={c.slug}
             href={`/${c.slug}`}
-            className="card-glass-hover animate-slide-up"
-            style={{ animationDelay: `${i * 0.03}s`, animationFillMode: 'forwards' }}
+            className="group rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 transition-all duration-300 hover:border-brand/20 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-brand/5"
           >
-            <h2 className="text-lg font-semibold text-white group-hover:text-brand transition-colors">{c.h1}</h2>
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand/20 to-brand/5 text-sm font-bold text-brand mb-3">
+              {c.h1.charAt(0)}
+            </div>
+            <h2 className="text-base font-semibold text-white group-hover:text-brand transition-colors">{c.h1}</h2>
             <p className="mt-1 text-sm text-white/40 line-clamp-2">{c.intro}</p>
           </Link>
         ))}

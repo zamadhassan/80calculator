@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import Link from "next/link";
+import { categories } from "@/data/categories";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -93,82 +94,104 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${outfit.className} min-h-full flex flex-col bg-brand-dark text-white antialiased`}
+        className={`${outfit.className} min-h-full flex flex-col bg-[#1c1c1c] text-white antialiased`}
       >
-        <header className="sticky top-0 z-50 border-b border-white/[0.04] glass">
+        <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#1c1c1c]/80 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl gradient-gold text-black font-bold text-sm">
+            <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-brand-light text-black font-bold text-sm shadow-lg shadow-brand/20">
                 N
               </div>
-              <span className="text-xl font-bold text-white group-hover:text-brand transition-colors">
-                Nexora
-              </span>
-              <span className="text-xl font-light text-white/50">Calculators</span>
+              <span className="hidden sm:inline text-lg font-semibold text-white">Nexora</span>
+              <span className="hidden sm:inline text-lg font-light text-white/40">Calculators</span>
             </Link>
-            <nav className="hidden items-center gap-6 sm:flex">
-              <Link
-                href="/"
-                className="text-sm text-white/50 transition-colors hover:text-brand"
-              >
+
+            <nav className="hidden md:flex items-center gap-1">
+              <Link href="/" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
+                Home
+              </Link>
+              <div className="relative group">
+                <button className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                  Categories
+                  <svg className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div className="absolute top-full right-0 mt-1 w-64 rounded-xl border border-white/[0.06] bg-[#1c1c1c] p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  {categories.map(cat => (
+                    <Link
+                      key={cat.slug}
+                      href={`/category/${cat.slug}`}
+                      className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/5 transition-all"
+                    >
+                      <span className="text-base">{cat.icon}</span>
+                      {cat.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <Link href="/" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
                 All Calculators
               </Link>
             </nav>
+
+            <div className="flex items-center gap-3">
+              <Link
+                href="/"
+                className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand to-brand-light px-4 py-2 text-sm font-semibold text-black transition-all hover:brightness-110 active:scale-95"
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
         </header>
 
         <main className="flex-1">{children}</main>
 
-        <footer className="border-t border-white/[0.04] mt-16">
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <footer className="border-t border-white/[0.06] mt-20">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
               <div>
-                <Link href="/" className="flex items-center gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-gold text-black font-bold text-xs">
-                    N
-                  </div>
-                  <span className="text-lg font-bold text-white">Nexora</span>
-                  <span className="text-lg font-light text-white/40">Calculators</span>
+                <Link href="/" className="flex items-center gap-2.5">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand to-brand-light text-black font-bold text-xs">N</div>
+                  <span className="text-base font-semibold text-white">Nexora</span>
+                  <span className="text-base font-light text-white/40">Calculators</span>
                 </Link>
-                <p className="mt-3 text-sm text-white/40 leading-relaxed">
-                  Fast, free online calculators for work, money, health, and home projects.
+                <p className="mt-3 text-sm text-white/40 leading-relaxed max-w-xs">
+                  Fast, free online calculators for work, money, health, and home projects. 80+ tools, instant results.
                 </p>
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider">Calculators</h4>
-                <ul className="mt-3 space-y-2">
-                  <li><Link href="/bmi-calculator" className="text-sm text-white/40 hover:text-brand transition-colors">BMI Calculator</Link></li>
-                  <li><Link href="/loan-payment-calculator" className="text-sm text-white/40 hover:text-brand transition-colors">Loan Calculator</Link></li>
-                  <li><Link href="/calorie-calculator" className="text-sm text-white/40 hover:text-brand transition-colors">Calorie Calculator</Link></li>
-                  <li><Link href="/compound-interest-calculator" className="text-sm text-white/40 hover:text-brand transition-colors">Compound Interest</Link></li>
-                  <li><Link href="/mortgage-calculator" className="text-sm text-white/40 hover:text-brand transition-colors">Mortgage Calculator</Link></li>
+                <h4 className="text-xs font-semibold text-white/40 uppercase tracking-widest">Calculators</h4>
+                <ul className="mt-4 space-y-2.5">
+                  <li><Link href="/bmi-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">BMI Calculator</Link></li>
+                  <li><Link href="/loan-payment-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">Loan Payment</Link></li>
+                  <li><Link href="/calorie-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">Calorie Calculator</Link></li>
+                  <li><Link href="/compound-interest-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">Compound Interest</Link></li>
+                  <li><Link href="/mortgage-calculator" className="text-sm text-white/50 hover:text-brand transition-colors">Mortgage Calculator</Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider">Categories</h4>
-                <ul className="mt-3 space-y-2">
-                  <li><Link href="/category/construction-calculators" className="text-sm text-white/40 hover:text-brand transition-colors">Construction & Home</Link></li>
-                  <li><Link href="/category/business-calculators" className="text-sm text-white/40 hover:text-brand transition-colors">Business & Profit</Link></li>
-                  <li><Link href="/category/finance-calculators" className="text-sm text-white/40 hover:text-brand transition-colors">Finance & Loan</Link></li>
-                  <li><Link href="/category/health-calculators" className="text-sm text-white/40 hover:text-brand transition-colors">Health & Fitness</Link></li>
-                  <li><Link href="/category/work-time-calculators" className="text-sm text-white/40 hover:text-brand transition-colors">Work & Time</Link></li>
+                <h4 className="text-xs font-semibold text-white/40 uppercase tracking-widest">Categories</h4>
+                <ul className="mt-4 space-y-2.5">
+                  {categories.slice(0, 5).map(cat => (
+                    <li key={cat.slug}>
+                      <Link href={`/category/${cat.slug}`} className="text-sm text-white/50 hover:text-brand transition-colors">
+                        {cat.icon} {cat.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider">Company</h4>
-                <ul className="mt-3 space-y-2">
-                  <li><Link href="/" className="text-sm text-white/40 hover:text-brand transition-colors">Home</Link></li>
-                  <li><span className="text-sm text-white/40">Nexora Creation</span></li>
+                <h4 className="text-xs font-semibold text-white/40 uppercase tracking-widest">Company</h4>
+                <ul className="mt-4 space-y-2.5">
+                  <li><Link href="/" className="text-sm text-white/50 hover:text-brand transition-colors">Home</Link></li>
+                  <li><span className="text-sm text-white/50">Nexora Creation</span></li>
                 </ul>
               </div>
             </div>
-            <div className="mt-10 pt-6 border-t border-white/[0.04] flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
-              <p className="text-sm text-white/30">
-                Calculators provide estimates only. Results are for informational purposes.
-              </p>
-              <p className="text-sm text-white/30">
-                &copy; {new Date().getFullYear()} Nexora Creation. All rights reserved.
-              </p>
+            <div className="mt-12 pt-6 border-t border-white/[0.06] flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
+              <p className="text-xs text-white/30">Calculators provide estimates only. Results are for informational purposes.</p>
+              <p className="text-xs text-white/30">&copy; {new Date().getFullYear()} Nexora Creation. All rights reserved.</p>
             </div>
           </div>
         </footer>

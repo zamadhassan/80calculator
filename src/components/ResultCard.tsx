@@ -15,11 +15,11 @@ export default function ResultCard({ result }: { result: CalculatorResult }) {
   }
 
   return (
-    <div className="card-glass glow-gold-sm">
+    <div className="mt-6 rounded-2xl border border-brand/20 bg-gradient-to-br from-brand/[0.03] to-transparent p-6 sm:p-8">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-gold text-black font-bold text-sm">✓</div>
-          <h2 className="text-xl font-semibold gradient-gold-text">Results</h2>
+        <div className="flex items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand to-brand-light text-black font-bold text-sm">✓</div>
+          <h2 className="text-xl font-semibold text-brand">Results</h2>
         </div>
         <button
           onClick={copyAll}
@@ -31,9 +31,9 @@ export default function ResultCard({ result }: { result: CalculatorResult }) {
       </div>
       <div className="mt-4 space-y-2">
         {lines.map((l, i) => (
-          <div key={i} className="flex items-center justify-between rounded-xl bg-white/[0.03] border border-white/[0.04] px-4 py-3 transition-all hover:bg-white/[0.05]">
+          <div key={i} className="flex items-center justify-between rounded-xl bg-white/[0.03] border border-white/[0.04] px-4 py-3">
             <span className="text-sm text-white/50">{l.label}</span>
-            <span className="result-value text-lg">{l.value}</span>
+            <span className="text-lg font-semibold text-brand">{l.value}</span>
           </div>
         ))}
       </div>

@@ -10,17 +10,16 @@ export default function RelatedCalculators({ currentSlug, related }: { currentSl
   if (links.length === 0) return null
 
   return (
-    <div className="mt-8 animate-slide-up">
-      <h2 className="text-xl font-semibold gradient-gold-text">Related Calculators</h2>
+    <div className="mt-8">
+      <h2 className="text-lg font-semibold text-brand">Related Calculators</h2>
       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {links.map((c, i) => (
+        {links.map(c => (
           <Link
             key={c.slug}
             href={`/${c.slug}`}
-            className="card-glass-hover group animate-slide-up"
-            style={{ animationDelay: `${i * 0.05}s`, animationFillMode: 'forwards' }}
+            className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 text-sm text-white/60 transition-all hover:border-brand/20 hover:bg-white/[0.04] hover:text-brand"
           >
-            <h3 className="font-medium text-white group-hover:text-brand transition-colors">{c.h1}</h3>
+            {c.h1}
           </Link>
         ))}
       </div>
