@@ -17,14 +17,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find(p => p.slug === slug)
   if (!post) return {}
   return {
-    title: `${post.title} | Nexora Calculators Blog`,
+    title: `${post.title} | Easy Calculator Nex Blog`,
     description: post.description,
     keywords: `${post.category.toLowerCase()}, ${post.title.toLowerCase()}, calculator guide, free online calculator tips`,
     openGraph: {
       title: post.title,
       description: post.description,
       url: `${siteUrl}/blog/${post.slug}`,
-      siteName: 'Nexora Calculators',
+      siteName: 'Easy Calculator Nex',
       locale: 'en_US',
       type: 'article',
       publishedTime: post.date,
@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.description,
     author: { '@type': 'Person', name: post.author },
     datePublished: post.date,
-    publisher: { '@type': 'Organization', name: 'Nexora Creation' },
+    publisher: { '@type': 'Organization', name: 'Easy Calculator Nex' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteUrl}/blog/${post.slug}` },
   }
 

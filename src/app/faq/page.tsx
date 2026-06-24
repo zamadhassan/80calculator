@@ -5,14 +5,14 @@ import { categories } from '@/data/categories'
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
-  description: 'Answers to common questions about Nexora Calculators. Learn how our free online calculators work, privacy policy, and tips for best results.',
-  openGraph: { title: 'FAQ - Nexora Calculators', description: 'Answers to common questions about our free online calculators.' },
+  description: 'Answers to common questions about Easy Calculator Nex. Learn how our free online calculators work, privacy policy, and tips for best results.',
+  openGraph: { title: 'FAQ - Easy Calculator Nex', description: 'Answers to common questions about our free online calculators.' },
 }
 
 const generalFaqs = [
   {
-    q: 'What is Nexora Calculators?',
-    a: 'Nexora Calculators is a free online platform offering 80+ calculators across 7 categories including construction, finance, health, business, time tracking, date calculations, and math conversions. All calculators run entirely in your browser — no data is sent to any server.',
+    q: 'What is Easy Calculator Nex?',
+    a: 'Easy Calculator Nex is a free online platform offering 90+ calculators across 7 categories including construction, finance, health, business, time tracking, date calculations, and math conversions. All calculators run entirely in your browser — no data is sent to any server.',
   },
   {
     q: 'Are the calculators really free?',
@@ -28,7 +28,7 @@ const generalFaqs = [
   },
   {
     q: 'What kind of calculators do you offer?',
-    a: 'We offer 80+ calculators across 7 categories: Construction & Home (paint, concrete, roofing, tile), Business & Ecommerce (margin, markup, ROI), Finance & Investment (loan payment, compound interest, CAGR), Work Time & Payroll (hours, overtime, timesheet), Health & Fitness (BMI, BMR, calorie, body fat), Date & Age (age, date difference, day of week), and Math & Conversion (percentage, length, weight, temperature).',
+    a: 'We offer 90+ calculators across 7 categories: Construction & Home (paint, concrete, roofing, tile), Business & Ecommerce (margin, markup, ROI), Finance & Investment (loan payment, compound interest, CAGR), Work Time & Payroll (hours, overtime, timesheet), Health & Fitness (BMI, BMR, calorie, body fat), Date & Age (age, date difference, day of week), and Math & Conversion (percentage, length, weight, temperature).',
   },
   {
     q: 'Can I use these calculators on mobile?',

@@ -44,7 +44,7 @@ export default function SearchBar({ large }: { large?: boolean }) {
         </svg>
         <input
           type="text"
-          placeholder="Search 80+ calculators..."
+          placeholder="Search 90+ calculators..."
           className="w-full rounded-xl border border-white/10 bg-white/5 pl-11 pr-10 py-3.5 text-white placeholder-white/30 transition-all duration-200 focus:border-brand/50 focus:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-brand/20"
           value={query}
           onChange={e => handleInput(e.target.value)}
@@ -62,7 +62,7 @@ export default function SearchBar({ large }: { large?: boolean }) {
         )}
       </div>
       {ready && focused && results.length > 0 && query.length > 0 && (
-        <div className="absolute top-full mt-2 w-full rounded-xl border border-white/[0.08] bg-[#1c1c1c] p-2 shadow-2xl z-50">
+        <div className="absolute top-full mt-2 w-full rounded-xl border border-white/[0.08] bg-black p-2 shadow-2xl z-50">
           {results.map(r => (
             <a
               key={r.slug}

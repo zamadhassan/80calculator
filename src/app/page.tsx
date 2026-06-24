@@ -29,7 +29,7 @@ export default function Home() {
       <section className="text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-4 py-1.5 text-sm text-brand/80">
           <span className="h-1.5 w-1.5 rounded-full bg-brand animate-pulse" />
-          80+ Free Calculators
+          90+ Free Calculators
         </div>
         <h1 className="mt-6 text-4xl font-bold sm:text-5xl lg:text-6xl tracking-tight">
           <span className="text-white">Smart</span>{' '}
@@ -48,12 +48,12 @@ export default function Home() {
       {/* Stats */}
       <section className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.06] sm:grid-cols-4">
         {[
-          { value: '80+', label: 'Calculators' },
+          { value: '90+', label: 'Calculators' },
           { value: '100%', label: 'Free to Use' },
           { value: '7', label: 'Categories' },
           { value: '0', label: 'Signup Required' },
         ].map((stat, i) => (
-          <div key={i} className="bg-[#1c1c1c] px-6 py-8 text-center">
+          <div key={i} className="bg-black px-6 py-8 text-center">
             <div className="text-3xl font-bold bg-gradient-to-r from-brand to-brand-light bg-clip-text text-transparent">{stat.value}</div>
             <div className="mt-1 text-sm text-white/40">{stat.label}</div>
           </div>

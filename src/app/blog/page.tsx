@@ -5,7 +5,7 @@ import { blogPosts } from '@/data/blog'
 export const metadata: Metadata = {
   title: 'Blog - Calculator Tips & Guides',
   description: 'Read our latest articles on health, finance, construction, and productivity — with tips on using our calculators effectively.',
-  openGraph: { title: 'Blog - Nexora Calculators', description: 'Calculator tips, guides, and educational content.' },
+  openGraph: { title: 'Blog - Easy Calculator Nex', description: 'Calculator tips, guides, and educational content.' },
 }
 
 export default function BlogPage() {

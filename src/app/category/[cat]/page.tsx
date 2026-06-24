@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `${siteUrl}/category/${category.slug}`,
-      siteName: 'Nexora Calculators',
+      siteName: 'Easy Calculator Nex',
       locale: 'en_US',
       type: 'website',
       images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: title }],
@@ -65,7 +65,7 @@ export default async function CategoryPage({ params }: Props) {
     name: `${category.name} Calculators`,
     description: category.description,
     url: `${siteUrl}/category/${category.slug}`,
-    provider: { '@type': 'Organization', name: 'Nexora Creation' },
+    provider: { '@type': 'Organization', name: 'Easy Calculator Nex' },
   }
 
   return (

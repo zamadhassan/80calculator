@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 import { categories } from "@/data/categories";
 import "./globals.css";
 
@@ -15,8 +16,8 @@ const siteUrl = "https://80calculator.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nexora Calculators - Fast, Free Online Calculators",
-    template: "%s | Nexora Calculators",
+    default: "Easy Calculator Nex - Fast, Free Online Calculators",
+    template: "%s | Easy Calculator Nex",
   },
   description:
     "Free online calculators for work, money, health, and home projects. 90+ calculators with instant results — no signup required.",
@@ -27,23 +28,23 @@ export const metadata: Metadata = {
     "age calculator", "percentage calculator", "unit converter", "salary calculator",
     "compound interest", "concrete calculator", "body fat calculator", "ovulation calculator",
   ],
-  authors: [{ name: "Nexora Creation" }],
-  creator: "Nexora Creation",
-  publisher: "Nexora Creation",
+  authors: [{ name: "Easy Calculator Nex" }],
+  creator: "Easy Calculator Nex",
+  publisher: "Easy Calculator Nex",
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Nexora Calculators",
+    title: "Easy Calculator Nex",
     description:
-      "Fast, free online calculators for work, money, health, and home projects. 80+ calculators with instant results.",
+      "Fast, free online calculators for work, money, health, and home projects. 90+ calculators with instant results.",
     url: siteUrl,
-    siteName: "Nexora Calculators",
+    siteName: "Easy Calculator Nex",
     locale: "en_US",
     type: "website",
-    images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: "Nexora Calculators" }],
+    images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: "Easy Calculator Nex" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nexora Calculators",
+    title: "Easy Calculator Nex",
     description:
       "Fast, free online calculators for work, money, health, and home projects.",
     images: [`${siteUrl}/og-image.svg`],
@@ -60,7 +61,7 @@ export default function RootLayout({
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Nexora Creation",
+    name: "Easy Calculator Nex",
     url: siteUrl,
     description: "Provider of free online calculators and tools.",
   };
@@ -68,7 +69,7 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Nexora Calculators",
+    name: "Easy Calculator Nex",
     url: siteUrl,
     description: "Free online calculators for work, money, health, and home projects.",
     potentialAction: {
@@ -87,8 +88,8 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="theme-color" content="#1c1c1c" />
-        <meta name="application-name" content="Nexora Calculators" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="application-name" content="Easy Calculator Nex" />
         <meta name="google-site-verification" content="VkF8mI-MiJ5pBGYyMqFrHFqE5A4ZIOgx3xlsZ_qR1bc" />
         <script
           type="application/ld+json"
@@ -100,16 +101,14 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${outfit.className} min-h-full flex flex-col bg-[#1c1c1c] text-white antialiased`}
+        className={`${outfit.className} min-h-full flex flex-col bg-black text-white antialiased`}
       >
-        <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#1c1c1c]/80 backdrop-blur-xl">
+        <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-black/80 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-brand-light text-black font-bold text-sm shadow-lg shadow-brand/20">
-                N
-              </div>
-              <span className="hidden sm:inline text-lg font-semibold text-white">Nexora</span>
-              <span className="hidden sm:inline text-lg font-light text-white/40">Calculators</span>
+              <Image src="/logo.png" alt="Easy Calculator Nex" width={36} height={36} className="rounded-xl" />
+              <span className="hidden sm:inline text-lg font-semibold text-white">Easy</span>
+              <span className="hidden sm:inline text-lg font-light text-white/40">Calculator Nex</span>
             </Link>
 
             {/* Desktop Nav */}
@@ -122,7 +121,7 @@ export default function RootLayout({
                   Categories
                   <svg className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </button>
-                <div className="absolute top-full right-0 mt-1 w-64 rounded-xl border border-white/[0.06] bg-[#1c1c1c] p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200" role="menu">
+                <div className="absolute top-full right-0 mt-1 w-64 rounded-xl border border-white/[0.06] bg-black p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200" role="menu">
                   {categories.map(cat => (
                     <Link
                       key={cat.slug}
@@ -160,7 +159,7 @@ export default function RootLayout({
                 <summary className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 text-white/60 hover:text-brand hover:border-brand/30 transition-all cursor-pointer list-none [&::-webkit-details-marker]:hidden" aria-label="Toggle menu">
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
                 </summary>
-                <div className="absolute top-full right-0 mt-2 w-56 rounded-xl border border-white/[0.06] bg-[#1c1c1c] p-2 shadow-2xl z-50" role="menu">
+                <div className="absolute top-full right-0 mt-2 w-56 rounded-xl border border-white/[0.06] bg-black p-2 shadow-2xl z-50" role="menu">
                   <Link href="/" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">Home</Link>
                   <Link href="/blog" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">Blog</Link>
                   <Link href="/faq" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">FAQ</Link>
@@ -185,12 +184,12 @@ export default function RootLayout({
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
               <div>
                 <Link href="/" className="flex items-center gap-2.5">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand to-brand-light text-black font-bold text-xs">N</div>
-                  <span className="text-base font-semibold text-white">Nexora</span>
-                  <span className="text-base font-light text-white/40">Calculators</span>
+                  <Image src="/logo.png" alt="Easy Calculator Nex" width={32} height={32} className="rounded-lg" />
+                  <span className="text-base font-semibold text-white">Easy</span>
+                  <span className="text-base font-light text-white/40">Calculator Nex</span>
                 </Link>
                 <p className="mt-3 text-sm text-white/40 leading-relaxed max-w-xs">
-                  Fast, free online calculators for work, money, health, and home projects. 80+ tools, instant results.
+                  Fast, free online calculators for work, money, health, and home projects. 90+ tools, instant results.
                 </p>
               </div>
               <div>
@@ -220,13 +219,13 @@ export default function RootLayout({
                   <li><Link href="/" className="text-sm text-white/50 hover:text-brand transition-colors">Home</Link></li>
                   <li><Link href="/blog" className="text-sm text-white/50 hover:text-brand transition-colors">Blog</Link></li>
                   <li><Link href="/faq" className="text-sm text-white/50 hover:text-brand transition-colors">FAQ</Link></li>
-                  <li><span className="text-sm text-white/50">Nexora Creation</span></li>
+                  <li><span className="text-sm text-white/50">Easy Calculator Nex</span></li>
                 </ul>
               </div>
             </div>
             <div className="mt-12 pt-6 border-t border-white/[0.06] flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
               <p className="text-xs text-white/30">Calculators provide estimates only. Results are for informational purposes.</p>
-              <p className="text-xs text-white/30">&copy; {new Date().getFullYear()} Nexora Creation. All rights reserved.</p>
+              <p className="text-xs text-white/30">&copy; {new Date().getFullYear()} Easy Calculator Nex. All rights reserved.</p>
             </div>
           </div>
         </footer>

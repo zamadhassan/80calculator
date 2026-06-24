@@ -94,7 +94,7 @@ export default function Calculator({ config }: { config: CalculatorConfig }) {
                     onChange={e => handleInput(input.id, Number(e.target.value))}
                   >
                     {input.options.map(o => (
-                      <option key={o.value} value={o.value} style={{ background: '#1c1c1c', color: '#fff' }}>{o.label}</option>
+                      <option key={o.value} value={o.value} style={{ background: '#000', color: '#fff' }}>{o.label}</option>
                     ))}
                   </select>
                 ) : (

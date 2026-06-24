@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: config.title,
       description: config.metaDescription,
       url: `${siteUrl}/${config.slug}`,
-      siteName: 'Nexora Calculators',
+      siteName: 'Easy Calculator Nex',
       locale: 'en_US',
       type: 'website',
       images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: config.h1 }],
@@ -66,7 +66,7 @@ export default async function CalculatorPage({ params }: Props) {
     operatingSystem: 'All',
     browserRequirements: 'JavaScript',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@type': 'Organization', name: 'Nexora Creation' },
+    author: { '@type': 'Organization', name: 'Easy Calculator Nex' },
   }
 
   const breadcrumbSchema = {
