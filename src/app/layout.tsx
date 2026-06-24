@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import Link from "next/link";
 import { categories } from "@/data/categories";
-import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -81,12 +80,9 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="h-full scroll-smooth" data-theme="dark">
+    <html lang="en" className="h-full scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <script dangerouslySetInnerHTML={{
-          __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}})()`
-        }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
@@ -97,7 +93,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${outfit.className} min-h-full flex flex-col antialiased`}
+        className={`${outfit.className} min-h-full flex flex-col bg-[#1c1c1c] text-white antialiased`}
       >
         <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#1c1c1c]/80 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -144,8 +140,7 @@ export default function RootLayout({
               </Link>
             </nav>
 
-            <div className="flex items-center gap-2">
-              <ThemeToggle />
+            <div className="flex items-center gap-3">
               <Link
                 href="/"
                 className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand to-brand-light px-4 py-2 text-sm font-semibold text-black transition-all hover:brightness-110 active:scale-95"
