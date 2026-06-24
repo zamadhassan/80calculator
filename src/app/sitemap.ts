@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllCalculators } from '@/data/index'
 import { categories } from '@/data/categories'
+import { blogPosts } from '@/data/blog'
 
 const siteUrl = 'https://80calculator.vercel.app'
 
@@ -20,6 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  const blogUrls = blogPosts.map(p => ({
+    url: `${siteUrl}/blog/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   return [
     {
       url: siteUrl,
@@ -33,6 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
+    {
+      url: `${siteUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    ...blogUrls,
     ...catUrls,
     ...calcUrls,
   ]

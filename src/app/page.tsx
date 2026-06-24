@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getAllCalculators } from '@/data/index'
 import { categories } from '@/data/categories'
 import SearchBar from '@/components/SearchBar'
+import CalculatorIcon from '@/components/CalculatorIcon'
 
 export default function Home() {
   const calculators = getAllCalculators()
@@ -101,8 +102,8 @@ export default function Home() {
               href={`/${c.slug}`}
               className="group rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 transition-all duration-300 hover:border-brand/20 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-brand/5"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand/20 to-brand/5 text-sm font-bold text-brand mb-3">
-                {c.h1.charAt(0)}
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand/20 to-brand/5 text-sm text-brand mb-3">
+                <CalculatorIcon slug={c.slug} className="h-4 w-4" />
               </div>
               <h3 className="font-medium text-white group-hover:text-brand transition-colors">{c.h1}</h3>
               <p className="mt-1 text-sm text-white/40">{c.category.split(',')[0]}</p>
@@ -137,8 +138,9 @@ export default function Home() {
                     <Link
                       key={c.slug}
                       href={`/${c.slug}`}
-                      className="group rounded-xl border border-white/[0.04] bg-white/[0.01] px-4 py-2.5 text-sm text-white/40 transition-all hover:border-brand/15 hover:bg-white/[0.03] hover:text-brand"
+                      className="group rounded-xl border border-white/[0.04] bg-white/[0.01] px-4 py-2.5 text-sm text-white/40 transition-all hover:border-brand/15 hover:bg-white/[0.03] hover:text-brand flex items-center gap-2"
                     >
+                      <CalculatorIcon slug={c.slug} className="h-3 w-3 text-white/20 group-hover:text-brand/60" />
                       {c.h1}
                     </Link>
                   ))}

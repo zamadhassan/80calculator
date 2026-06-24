@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from 'react'
 import { getAllCalculators } from '@/data/index'
+import CalculatorIcon from './CalculatorIcon'
 
 export default function SearchBar({ large }: { large?: boolean }) {
   const [query, setQuery] = useState('')
@@ -68,8 +69,8 @@ export default function SearchBar({ large }: { large?: boolean }) {
               href={`/${r.slug}`}
               className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-white/5"
             >
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-brand/20 to-brand/5 text-xs font-semibold text-brand">
-                {r.h1.charAt(0)}
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-brand/20 to-brand/5 text-xs text-brand">
+                <CalculatorIcon slug={r.slug} className="h-3.5 w-3.5" />
               </span>
               <div className="min-w-0">
                 <p className="font-medium text-white truncate">{r.h1}</p>

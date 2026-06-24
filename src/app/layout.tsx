@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import Link from "next/link";
 import { categories } from "@/data/categories";
+import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -80,9 +81,12 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="h-full scroll-smooth">
+    <html lang="en" className="h-full scroll-smooth" data-theme="dark">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script dangerouslySetInnerHTML={{
+          __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}})()`
+        }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
@@ -93,7 +97,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${outfit.className} min-h-full flex flex-col bg-[#1c1c1c] text-white antialiased`}
+        className={`${outfit.className} min-h-full flex flex-col antialiased`}
       >
         <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#1c1c1c]/80 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -135,9 +139,13 @@ export default function RootLayout({
               <Link href="/faq" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
                 FAQ
               </Link>
+              <Link href="/blog" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
+                Blog
+              </Link>
             </nav>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
               <Link
                 href="/"
                 className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand to-brand-light px-4 py-2 text-sm font-semibold text-black transition-all hover:brightness-110 active:scale-95"
@@ -152,6 +160,7 @@ export default function RootLayout({
                 </summary>
                 <div className="absolute top-full right-0 mt-2 w-56 rounded-xl border border-white/[0.06] bg-[#1c1c1c] p-2 shadow-2xl z-50" role="menu">
                   <Link href="/" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">Home</Link>
+                  <Link href="/blog" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">Blog</Link>
                   <Link href="/faq" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all" role="menuitem">FAQ</Link>
                   <div className="h-px bg-white/[0.06] my-1" />
                   <p className="px-3 py-1.5 text-xs text-white/30 uppercase tracking-wider">Categories</p>
@@ -207,6 +216,7 @@ export default function RootLayout({
                 <h4 className="text-xs font-semibold text-white/40 uppercase tracking-widest">Company</h4>
                 <ul className="mt-4 space-y-2.5">
                   <li><Link href="/" className="text-sm text-white/50 hover:text-brand transition-colors">Home</Link></li>
+                  <li><Link href="/blog" className="text-sm text-white/50 hover:text-brand transition-colors">Blog</Link></li>
                   <li><Link href="/faq" className="text-sm text-white/50 hover:text-brand transition-colors">FAQ</Link></li>
                   <li><span className="text-sm text-white/50">Nexora Creation</span></li>
                 </ul>

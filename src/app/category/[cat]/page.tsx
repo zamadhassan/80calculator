@@ -3,6 +3,7 @@ import { categories } from '@/data/categories'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import CalculatorIcon from '@/components/CalculatorIcon'
 
 type Props = { params: Promise<{ cat: string }> }
 
@@ -78,8 +79,8 @@ export default async function CategoryPage({ params }: Props) {
             href={`/${c.slug}`}
             className="group rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 transition-all duration-300 hover:border-brand/20 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-brand/5"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand/20 to-brand/5 text-sm font-bold text-brand mb-3">
-              {c.h1.charAt(0)}
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand/20 to-brand/5 text-sm text-brand mb-3">
+              <CalculatorIcon slug={c.slug} className="h-4 w-4" />
             </div>
             <h2 className="text-base font-semibold text-white group-hover:text-brand transition-colors">{c.h1}</h2>
             <p className="mt-1 text-sm text-white/40 line-clamp-2">{c.intro}</p>

@@ -3,6 +3,7 @@
 import { type CalculatorConfig, type CalculatorResult } from '@/data/index'
 import { useState, useId } from 'react'
 import { categories } from '@/data/categories'
+import CalculatorIcon from './CalculatorIcon'
 import ResultCard from './ResultCard'
 import FormulaBlock from './FormulaBlock'
 import ExampleBlock from './ExampleBlock'
@@ -57,10 +58,17 @@ export default function Calculator({ config }: { config: CalculatorConfig }) {
       ]} />
 
       <div className="mt-8">
-        <h1 className="text-3xl font-bold sm:text-4xl tracking-tight">
-          <span className="bg-gradient-to-r from-brand via-brand-light to-brand bg-clip-text text-transparent">{config.h1}</span>
-        </h1>
-        <p className="mt-2 text-lg text-white/50 leading-relaxed">{config.intro}</p>
+        <div className="flex items-center gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand/20 to-brand/5 text-lg text-brand">
+            <CalculatorIcon slug={config.slug} className="h-5 w-5" />
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold sm:text-4xl tracking-tight">
+              <span className="bg-gradient-to-r from-brand via-brand-light to-brand bg-clip-text text-transparent">{config.h1}</span>
+            </h1>
+            <p className="mt-2 text-lg text-white/50 leading-relaxed">{config.intro}</p>
+          </div>
+        </div>
       </div>
 
       <div className="mt-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8" role="form" aria-label={config.h1}>
