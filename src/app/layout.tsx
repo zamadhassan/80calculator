@@ -94,7 +94,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#000000" />
         <meta name="application-name" content="Easy Calculator Nex" />
-        <meta name="google-site-verification" content="VkF8mI-MiJ5pBGYyMqFrHFqE5A4ZIOgx3xlsZ_qR1bc" />
+        <meta name="google-site-verification" content="m5Kpkn8heCiVmKE8sjDbRJgRDXsVNakziY4jNnKYNdc" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
