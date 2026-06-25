@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Script from 'next/script'
 import { blogPosts } from '@/data/blog'
 import { notFound } from 'next/navigation'
+import { RelatedCalculatorsFromBlog } from '@/components/RelatedBlogPosts'
+import ShareButtons from '@/components/ShareButtons'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -129,6 +131,9 @@ export default async function BlogPostPage({ params }: Props) {
           All Articles
         </Link>
       </div>
+
+      <RelatedCalculatorsFromBlog currentCategory={post.category} />
+      <ShareButtons url={`${siteUrl}/blog/${post.slug}`} title={post.title} />
     </div>
   )
 }

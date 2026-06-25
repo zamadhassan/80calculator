@@ -112,6 +112,15 @@ const faqSchema = {
   ],
 }
 
+const faqBreadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: `${siteUrl}/faq` },
+  ],
+}
+
 export default function FaqPage() {
   const allCalcs = getAllCalculators()
   const totalFaqs = allCalcs.reduce((sum, c) => sum + c.faqs.length, 0)
@@ -119,6 +128,7 @@ export default function FaqPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
       <Script id="faqpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id="faq-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqBreadcrumbSchema) }} />
       {/* Hero */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.02] px-4 py-1.5 text-xs text-white/40 mb-4">

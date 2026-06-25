@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import CalculatorWrapper from '@/components/CalculatorWrapper'
 import Script from 'next/script'
 import { categories } from '@/data/categories'
+import { RelatedBlogPostsForCalculator } from '@/components/RelatedBlogPosts'
+import ShareButtons from '@/components/ShareButtons'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -80,6 +82,8 @@ export default async function CalculatorPage({ params }: Props) {
       <Script id="webapp-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <CalculatorWrapper slug={slug} />
+      <RelatedBlogPostsForCalculator calculatorSlug={slug} />
+      <ShareButtons url={`${siteUrl}/${slug}`} title={config.h1} />
     </>
   )
 }

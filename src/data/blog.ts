@@ -7,6 +7,7 @@ export type BlogPost = {
   date: string
   category: string
   readTime: string
+  relatedCalculatorSlugs: string[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -19,6 +20,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-06-20',
     category: 'Health',
     readTime: '5 min read',
+    relatedCalculatorSlugs: ['bmi-calculator', 'body-fat-calculator', 'calorie-calculator', 'ideal-weight-calculator'],
   },
   {
     slug: 'compound-interest-guide',
@@ -29,6 +31,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-06-18',
     category: 'Finance',
     readTime: '6 min read',
+    relatedCalculatorSlugs: ['compound-interest-calculator', 'investment-calculator', 'future-value-calculator', 'interest-calculator'],
   },
   {
     slug: 'calorie-deficit-explained',
@@ -39,6 +42,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-06-15',
     category: 'Health',
     readTime: '6 min read',
+    relatedCalculatorSlugs: ['calorie-calculator', 'bmr-calculator', 'calorie-deficit-calculator', 'maintenance-calorie-calculator'],
   },
   {
     slug: 'construction-material-estimating',
@@ -49,6 +53,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-06-12',
     category: 'Construction',
     readTime: '7 min read',
+    relatedCalculatorSlugs: ['concrete-calculator', 'paint-calculator', 'roofing-calculator', 'tile-calculator', 'gravel-calculator', 'lumber-calculator'],
   },
   {
     slug: 'loan-payment-strategies',
@@ -59,6 +64,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-06-10',
     category: 'Finance',
     readTime: '5 min read',
+    relatedCalculatorSlugs: ['loan-payment-calculator', 'mortgage-calculator', 'debt-payoff-calculator', 'credit-card-payoff-calculator'],
   },
   {
     slug: 'work-life-balance-time-tracking',
@@ -69,5 +75,6 @@ export const blogPosts: BlogPost[] = [
     date: '2026-06-08',
     category: 'Productivity',
     readTime: '5 min read',
+    relatedCalculatorSlugs: ['hours-calculator', 'time-card-calculator', 'overtime-calculator', 'timesheet-calculator'],
   },
 ]
