@@ -106,7 +106,7 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-black/80 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-              <Image src="/logo.png" alt="Easy Calculator Nex" width={52} height={52} className="rounded-xl" />
+              <Image src="/logo.png" alt="Easy Calculator Nex" width={180} height={35} className="h-auto w-[180px] rounded-xl" />
             </Link>
 
             {/* Desktop Nav */}
@@ -133,7 +133,7 @@ export default function RootLayout({
                   ))}
                 </div>
               </div>
-              <Link href="/" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
+              <Link href="/#all-calculators" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
                 All Calculators
               </Link>
               <Link href="/faq" className="px-3 py-2 text-sm text-white/60 hover:text-brand rounded-lg hover:bg-white/5 transition-all">
@@ -182,7 +182,7 @@ export default function RootLayout({
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
               <div>
                 <Link href="/" className="flex items-center gap-2.5">
-                  <Image src="/logo.png" alt="Easy Calculator Nex" width={48} height={48} className="rounded-lg" />
+                  <Image src="/logo.png" alt="Easy Calculator Nex" width={180} height={35} className="h-auto w-[180px] rounded-lg" />
                 </Link>
                 <p className="mt-3 text-sm text-white/40 leading-relaxed max-w-xs">
                   Fast, free online calculators for work, money, health, and home projects. 90+ tools, instant results.

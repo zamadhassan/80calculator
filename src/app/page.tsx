@@ -67,7 +67,7 @@ export default function Home() {
             <h2 className="text-2xl font-semibold text-white">Categories</h2>
             <p className="mt-1 text-sm text-white/40">Browse calculators by category</p>
           </div>
-          <Link href="/" className="text-sm text-brand/60 hover:text-brand transition-colors">
+          <Link href="#all-calculators" className="text-sm text-brand/60 hover:text-brand transition-colors">
             View all &rarr;
           </Link>
         </div>
@@ -106,7 +106,7 @@ export default function Home() {
             <h2 className="text-2xl font-semibold text-white">Popular Calculators</h2>
             <p className="mt-1 text-sm text-white/40">Most used tools</p>
           </div>
-          <Link href="/" className="text-sm text-brand/60 hover:text-brand transition-colors">
+          <Link href="#all-calculators" className="text-sm text-brand/60 hover:text-brand transition-colors">
             View all &rarr;
           </Link>
         </div>
@@ -128,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* All Calculators by Category */}
-      <section className="mt-20">
+      <section id="all-calculators" className="mt-20 scroll-mt-24">
         <h2 className="text-2xl font-semibold text-white">All Calculators</h2>
         <p className="mt-1 text-sm text-white/40">Browse the complete collection</p>
         <div className="mt-8 space-y-12">
