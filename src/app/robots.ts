@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Bingbot', allow: '/' },
       { userAgent: '*', allow: '/' },
     ],
-    sitemap: 'https://80calculator.vercel.app/sitemap.xml',
+    sitemap: 'https://easycalculatornex.pro/sitemap.xml',
   }
 }

@@ -11,7 +11,7 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const siteUrl = "https://80calculator.vercel.app";
+const siteUrl = "https://easycalculatornex.pro";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

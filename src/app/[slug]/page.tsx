@@ -7,7 +7,7 @@ import { categories } from '@/data/categories'
 
 type Props = { params: Promise<{ slug: string }> }
 
-const siteUrl = 'https://80calculator.vercel.app'
+const siteUrl = 'https://easycalculatornex.pro'
 
 export async function generateStaticParams() {
   return getAllCalculators().map(c => ({ slug: c.slug }))

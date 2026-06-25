@@ -1,0 +1,48 @@
+# Easy Calculator Nex - Documentation for LLMs
+
+> Fast, free online calculators for work, money, health, and home projects. 90+ tools, instant results, no signup.
+
+## Core Info
+
+- Site: Easy Calculator Nex
+- URL: https://easycalculatornex.pro
+- Tagline: Smart Calculators for Every Need
+- Language: English (US)
+- Category: Technology / Online Tools
+
+## Available Calculators (90+)
+
+### Construction & Home
+- Paint Calculator, Concrete Calculator, Roofing Calculator, Tile Calculator, Acreage Calculator, Aggregate Calculator
+
+### Business & Ecommerce
+- Margin Calculator, Markup Calculator, ROI Calculator, Business Loan Calculator
+
+### Finance & Investment
+- Loan Payment Calculator, Mortgage Calculator, Compound Interest Calculator, CAGR Calculator
+
+### Work Time & Payroll
+- Hours Calculator, Overtime Calculator, Timesheet Calculator, Salary Calculator
+
+### Health & Fitness
+- BMI Calculator, BMR Calculator, Calorie Calculator, Body Fat Calculator, Ideal Weight Calculator, Pregnancy Calculator, Ovulation Calculator, Period Calculator
+
+### Date & Age
+- Age Calculator, Date Difference Calculator, Date Add Calculator, Weeks Between Dates Calculator, Day of Week Calculator, Time Duration Calculator
+
+### Math & Conversion
+- Percentage Calculator, Length Converter, Weight Converter, Temperature Converter, Speed Converter, Number Base Converter
+
+## Category Pages
+- https://easycalculatornex.pro/category/construction-calculators
+- https://easycalculatornex.pro/category/business-calculators
+- https://easycalculatornex.pro/category/finance-calculators
+- https://easycalculatornex.pro/category/work-calculators
+- https://easycalculatornex.pro/category/health-calculators
+- https://easycalculatornex.pro/category/date-calculators
+- https://easycalculatornex.pro/category/math-calculators
+
+## Key Pages
+- Home: https://easycalculatornex.pro
+- FAQ: https://easycalculatornex.pro/faq
+- Blog: https://easycalculatornex.pro/blog

@@ -3,7 +3,7 @@ import { getAllCalculators } from '@/data/index'
 import { categories } from '@/data/categories'
 import { blogPosts } from '@/data/blog'
 
-const siteUrl = 'https://80calculator.vercel.app'
+const siteUrl = 'https://easycalculatornex.pro'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const calculators = getAllCalculators()

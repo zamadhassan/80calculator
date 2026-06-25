@@ -1,12 +1,30 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Script from 'next/script'
 import { getAllCalculators } from '@/data'
 import { categories } from '@/data/categories'
+
+const siteUrl = 'https://easycalculatornex.pro'
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
   description: 'Answers to common questions about Easy Calculator Nex. Learn how our free online calculators work, privacy policy, and tips for best results.',
-  openGraph: { title: 'FAQ - Easy Calculator Nex', description: 'Answers to common questions about our free online calculators.' },
+  openGraph: {
+    title: 'FAQ - Easy Calculator Nex',
+    description: 'Answers to common questions about our free online calculators.',
+    url: `${siteUrl}/faq`,
+    siteName: 'Easy Calculator Nex',
+    locale: 'en_US',
+    type: 'website',
+    images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: 'FAQ - Easy Calculator Nex' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FAQ - Easy Calculator Nex',
+    description: 'Answers to common questions about our free online calculators.',
+  },
+  alternates: { canonical: `${siteUrl}/faq` },
+  keywords: ['faq', 'frequently asked questions', 'calculator help', 'free online calculators', 'how to use calculator'],
 }
 
 const generalFaqs = [
@@ -72,12 +90,35 @@ const generalFaqs = [
   },
 ]
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is Easy Calculator Nex?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Easy Calculator Nex is a free online platform offering 90+ calculators across 7 categories. All calculators run entirely in your browser — no data is sent to any server.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are the calculators really free?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, every calculator is completely free. No subscriptions, no credit card, no account required.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you store my data?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. All calculations happen entirely in your browser. We never send, store, or process your inputs on any server.' },
+    },
+  ],
+}
+
 export default function FaqPage() {
   const allCalcs = getAllCalculators()
   const totalFaqs = allCalcs.reduce((sum, c) => sum + c.faqs.length, 0)
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      <Script id="faqpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Hero */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.02] px-4 py-1.5 text-xs text-white/40 mb-4">

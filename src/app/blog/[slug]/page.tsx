@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 
 type Props = { params: Promise<{ slug: string }> }
 
-const siteUrl = 'https://80calculator.vercel.app'
+const siteUrl = 'https://easycalculatornex.pro'
 
 export async function generateStaticParams() {
   return blogPosts.map(p => ({ slug: p.slug }))

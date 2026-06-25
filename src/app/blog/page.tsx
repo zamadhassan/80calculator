@@ -2,10 +2,27 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { blogPosts } from '@/data/blog'
 
+const siteUrl = 'https://easycalculatornex.pro'
+
 export const metadata: Metadata = {
   title: 'Blog - Calculator Tips & Guides',
   description: 'Read our latest articles on health, finance, construction, and productivity — with tips on using our calculators effectively.',
-  openGraph: { title: 'Blog - Easy Calculator Nex', description: 'Calculator tips, guides, and educational content.' },
+  openGraph: {
+    title: 'Blog - Easy Calculator Nex',
+    description: 'Calculator tips, guides, and educational content.',
+    url: `${siteUrl}/blog`,
+    siteName: 'Easy Calculator Nex',
+    locale: 'en_US',
+    type: 'website',
+    images: [{ url: `${siteUrl}/og-image.svg`, width: 1200, height: 630, alt: 'Blog - Easy Calculator Nex' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog - Easy Calculator Nex',
+    description: 'Calculator tips, guides, and educational content.',
+  },
+  alternates: { canonical: `${siteUrl}/blog` },
+  keywords: ['calculator blog', 'calculator tips', 'BMI guide', 'compound interest guide', 'calorie deficit', 'financial calculator guide', 'health calculator tips'],
 }
 
 export default function BlogPage() {

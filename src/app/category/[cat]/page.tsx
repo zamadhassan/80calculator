@@ -7,7 +7,7 @@ import CalculatorIcon from '@/components/CalculatorIcon'
 
 type Props = { params: Promise<{ cat: string }> }
 
-const siteUrl = 'https://80calculator.vercel.app'
+const siteUrl = 'https://easycalculatornex.pro'
 
 export async function generateStaticParams() {
   return categories.map(c => ({ cat: c.slug }))

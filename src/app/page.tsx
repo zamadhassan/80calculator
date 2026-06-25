@@ -5,7 +5,7 @@ import { categories } from '@/data/categories'
 import SearchBar from '@/components/SearchBar'
 import CalculatorIcon from '@/components/CalculatorIcon'
 
-const siteUrl = 'https://80calculator.vercel.app'
+const siteUrl = 'https://easycalculatornex.pro'
 
 export default function Home() {
   const calculators = getAllCalculators()
