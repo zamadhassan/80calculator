@@ -107,8 +107,6 @@ export default function RootLayout({
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-2.5 group shrink-0">
               <Image src="/logo.png" alt="Easy Calculator Nex" width={36} height={36} className="rounded-xl" />
-              <span className="hidden sm:inline text-lg font-semibold text-white">Easy</span>
-              <span className="hidden sm:inline text-lg font-light text-white/40">Calculator Nex</span>
             </Link>
 
             {/* Desktop Nav */}
@@ -185,8 +183,6 @@ export default function RootLayout({
               <div>
                 <Link href="/" className="flex items-center gap-2.5">
                   <Image src="/logo.png" alt="Easy Calculator Nex" width={32} height={32} className="rounded-lg" />
-                  <span className="text-base font-semibold text-white">Easy</span>
-                  <span className="text-base font-light text-white/40">Calculator Nex</span>
                 </Link>
                 <p className="mt-3 text-sm text-white/40 leading-relaxed max-w-xs">
                   Fast, free online calculators for work, money, health, and home projects. 90+ tools, instant results.
