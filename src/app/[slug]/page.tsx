@@ -54,9 +54,9 @@ export default async function CalculatorPage({ params }: Props) {
 
   const category = categories.find(c => c.name === config.category)
   const breadcrumbItems = [
-    { position: 1, name: 'Home', item: siteUrl },
-    { position: 2, name: config.category, item: `${siteUrl}/category/${category?.slug || 'calculators'}` },
-    { position: 3, name: config.h1, item: `${siteUrl}/${config.slug}` },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: config.category, item: `${siteUrl}/category/${category?.slug || 'calculators'}` },
+    { '@type': 'ListItem', position: 3, name: config.h1, item: `${siteUrl}/${config.slug}` },
   ]
 
   const webAppSchema = {
