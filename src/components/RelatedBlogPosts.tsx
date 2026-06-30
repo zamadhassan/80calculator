@@ -53,18 +53,12 @@ export function RelatedBlogPostsForCalculator({ calculatorSlug }: { calculatorSl
   )
 }
 
-export function RelatedCalculatorsFromBlog({ currentCategory }: { currentCategory: string }) {
+export function RelatedCalculatorsFromBlog({ calculatorSlugs }: { calculatorSlugs: string[] }) {
   const all = getAllCalculators()
-  const calcCategoryMap: Record<string, string> = {
-    Health: 'health-calculators',
-    Finance: 'finance-calculators',
-    Construction: 'construction-calculators',
-    Productivity: 'work-calculators',
-  }
-  const catSlug = calcCategoryMap[currentCategory]
-  if (!catSlug) return null
+  const related = calculatorSlugs
+    .map(slug => all.find(c => c.slug === slug))
+    .filter(Boolean) as ReturnType<typeof getAllCalculators>
 
-  const related = all.filter(c => c.category === currentCategory).slice(0, 4)
   if (related.length === 0) return null
 
   return (

@@ -132,7 +132,7 @@ export default async function BlogPostPage({ params }: Props) {
         </Link>
       </div>
 
-      <RelatedCalculatorsFromBlog currentCategory={post.category} />
+      <RelatedCalculatorsFromBlog calculatorSlugs={post.relatedCalculatorSlugs} />
       <ShareButtons url={`${siteUrl}/blog/${post.slug}`} title={post.title} />
     </div>
   )
