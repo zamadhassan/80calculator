@@ -3,7 +3,8 @@ import { blogPosts } from '@/data/blog'
 const siteUrl = 'https://easycalculatornex.pro'
 
 export async function GET() {
-  const items = blogPosts.map(post => `
+  const posts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  const items = posts.map(post => `
     <item>
       <title><![CDATA[${post.title}]]></title>
       <description><![CDATA[${post.description}]]></description>

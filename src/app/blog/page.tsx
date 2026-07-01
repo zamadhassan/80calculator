@@ -26,6 +26,8 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
+  const posts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
@@ -42,7 +44,7 @@ export default function BlogPage() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {blogPosts.map(post => (
+        {posts.map(post => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
